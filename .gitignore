@@ -7,4 +7,4 @@ dockerfile
 node_modules
 node_modules/**
 bin/**
-static/dist/**
+static/dist
