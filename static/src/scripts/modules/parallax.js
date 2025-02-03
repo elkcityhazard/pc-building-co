@@ -6,13 +6,8 @@ export const Parallax = function() {
     }
 
     const updateParallax = () => {
-        const totalHeight = document.body.scrollHeight;
+        const totalHeight = document.documentElement.scrollHeight;
         const currentScroll = document.documentElement.scrollTop;
-
-        if (currentScroll > bgImage.getBoundingClientRect().height) {
-            return;
-        }
-
         let p = 50 - (currentScroll / totalHeight * 200);
         bgImage.style.backgroundPositionY = p + "%";
     };
