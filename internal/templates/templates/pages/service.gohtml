@@ -1,0 +1,15 @@
+{{template "base-single" .}}
+
+{{ define "content"}}
+    <section class="article">
+        {{ with .Data.FrontMatter}}
+        <h1 class="article__heading">{{.Title}}</h1>
+    {{ end }}
+    {{with .Data.Content}}
+    <article class="article__body">
+        {{ . }}
+    </article>
+    {{ end }}
+    {{ end}}
+
+

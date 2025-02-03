@@ -1,0 +1,52 @@
+{{ template "base" .}}
+
+{{ define "content"}}
+
+    <article class="services">
+        {{ with .Data.FrontMatter}}
+        <h1 class="services__heading">{{.Title}}</h1>
+    {{ end }}
+    {{ with .Data.FrontMatter.Content}}
+    <section id="serviceList" class="services__list">
+        <ul class="services__btn-group">
+        {{ range .}}
+        <li class="services__btn-item">
+            <button data-id="{{.ID}}" class="services__btn-btn{{if eq .ID 0}} active{{end}}" aria-label="view {{.Name}} card" aria-controls="serviceCard{{.ID}}">{{.Name}}</button>
+        </li>
+        {{ end}}
+        </ul>
+        <service-listings>
+            <div class="service-listings__inner">
+                {{ range .}}
+                <service-listings-card id="serviceCard{{.ID}}" data-id="{{.ID}}" class="{{if eq .ID 0}}active{{end}}" aria-label="slide #{{.ID}}">
+                    <div class="row">
+                        <div class="col">
+                            <header>
+                                <hgroup><h2>{{.Name}}</h2></hgroup>
+                            </header>
+                            <services-listings-content>
+                                {{.Text}}
+                            </services-listings-content>
+                            <a href="{{.URL}}" title="link to: {{.Name}}" aria-label="link to: {{.Name}}" class="btn primary">{{.Name}}</a>
+                        </div>
+                        <div class="col">
+                            <img src="{{.Image}}" alt="{{.Name}}" decoding="async" loading="lazy" height="auto" width="400">
+                        </div>
+                    </div>
+                </service-listings-card>
+       
+
+        {{ end }}
+
+            </div>
+        </service-listings>
+    </section>
+{{end}}
+    {{with .Data.Content}}
+    <section class="article__body">
+        {{ . }}
+    </section>
+    {{ end}}
+    </article>
+   
+{{ end }}

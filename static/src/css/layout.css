@@ -1,0 +1,64 @@
+:root {
+    --col-padding: 0.5rem;
+}
+
+.container {
+    margin-block: var(--spacing-md);
+    margin-inline: auto;
+    max-width: 1200px;
+}
+
+.col {
+    padding-block: var(--col-padding);
+    padding-inline: var(--col-padding);
+    padding-top: var(--col-padding);
+    padding-bottom: var(--col-padding);
+}
+
+.article {
+    &__heading,
+    &__body {
+        max-width: 100%;
+        width: calc(768 / 16 * 1rem);
+        margin-inline: auto;
+    }
+}
+
+.sidebar {
+    &__card {
+        background: transparent;
+        border: 2px solid var(--golden-brown);
+        max-width: 100%;
+        margin-inline: auto;
+        margin-block-start: var(--spacing-md);
+        padding: var(--spacing-md);
+        width: calc(767 / 16 * 1rem);
+        header {
+            margin-block-end: var(--spacing-sm);
+            h3 {
+                color: var(--drab-dark-brown);
+            }
+        }
+        .btn {
+            background: var(--drab-dark-brown);
+            color: var(--sunset);
+            .icon.phone  {
+                stroke: var(--sunset);
+                path {
+                    fill: var(--sunset);
+                }
+            }
+            &:hover,
+            &:active {
+                background: var(--sunset);
+                color: var(--drab-dark-brown);
+                .icon.phone  {
+                    stroke: var(--drab-dark-brown);
+                    path {
+                        fill: var(--drab-dark-brown);
+                    }
+                }
+            }
+        }
+    }
+} 

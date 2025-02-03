@@ -1,0 +1,39 @@
+{{define "head"}}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ with .Data.FrontMatter.Description}}
+    <meta name="description" content="{{.}}">
+    {{else}}
+    <meta name="description" content="PC Building Company Is A Luxury Home Remodeling & Building Company Located In Leelanau County, Michigan.">
+    {{end}}
+     <!-- open graph -->
+     <meta property="og:url" content="{{index .StringMap "BaseURL"}}{{.Data.FrontMatter.URL}}">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="{{with .Data.FrontMatter.Title}}{{.}}{{else}}{{end}}">
+     <meta property="og:image" content="{{with .Data.FrontMatter.MetaImage}}{{.}}{{else}}{{end}}">
+     <meta property="og:image:alt" content="{{with .Data.FrontMatter.MetaImageAlt}}{{.}}{{else}}og:image alt test here{{end}}">
+     <meta property="og:description" content="{{with .Data.FrontMatter.Description}}{{.}}{{end}}">
+     <meta property="og:site_name" content="{{index .StringMap "SiteTitle"}}">
+     <meta property="og:locale" content="en_US">
+     <meta property="article:author" content="{{with .Data.FrontMatter.Author}}{{.}}{{end}}">
+     <!--/open graph-->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{with index .StringMap "BaseURL"}}{{.}}{{end}}">
+    <meta name="twitter:creator" content="{{with .Data.FrontMatter.TwitterUsername}}{{.}}{{end}}">
+    <meta name="twitter:url" content="{{index .StringMap "BaseURL"}}{{.Data.FrontMatter.URL}}">
+    <meta name="twitter:title" content="{{with .Data.FrontMatter.Title}}{{.}}{{end}}">
+    <meta name="twitter:description" content="{{with .Data.FrontMatter.Description}}{{.}}{{end}}">
+    <meta name="twitter:image" content="{{with .Data.FrontMatter.MetaImage}}{{.}}{{else}}{{end}}">
+    <meta name="twitter:image:alt" content="{{with .Data.FrontMatter.MetaImageAlt}}{{.}}{{else}}og:image alt test here{{end}}">
+    
+     <!--/twiiter-->
+    <title>{{ with index .StringMap "PageTitle"}}{{.}}{{end}}{{with index .StringMap "SiteTitle"}} - {{.}}{{end}}</title>
+    <link rel="stylesheet" href="/static/dist/css/index.css">
+    <link rel="preload" href="/static/images/a-home-with-a-grassy-lawn.webp" as="image">
+    <script></script>
+    <script type="module" src="/static/dist/index.js" defer></script>
+</head>
+{{ end}}

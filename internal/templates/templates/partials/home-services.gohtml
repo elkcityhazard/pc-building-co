@@ -1,0 +1,64 @@
+{{define "home-services"}}
+<section id="homeServices" class="home-services">
+    {{template "icon-arrow-down" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hgroup>
+                    <h2>Leelanau County Home Builder Services</h2>
+                    <p>
+                        Leelanau County is home to some of the most stunning luxury properties in Michigan. 
+                        As demand for high-end remodels rises, we can help you choose the right service for
+                        your Leelanau County luxury home remodel project.  
+                    </p>
+                </hgroup>
+            </div>
+        </div>
+        <div class="row">
+            {{with index .Data "Services"}}
+                {{ range .Services }}
+                <div class="col">
+                    <div class="card">
+                        <div class="card__inner">
+                            <a href="{{.Url}}" title="{{.Name}} in Leelanau County, Michigan" aria-label="{{.Name}} in Leelanau County, Michigan">
+                            <div class="card__header">
+                                <hgroup>
+                                    <h3>{{.Name}}</h3>
+                                </hgroup>
+
+                            </div>
+                            <div class="card__body">
+
+                                {{ if eq .Icon "icon-home"}}
+                                {{template "icon-home" .}}
+                                {{ end}}
+                                {{ if eq .Icon "icon-bathroom"}}
+                                {{template "icon-bathroom" .}}
+                                {{ end}}
+                                {{ if eq .Icon "icon-closet"}}
+                                {{template "icon-closet" .}}
+                                {{ end}}
+                                {{ if eq .Icon "icon-fridge"}}
+                                {{template "icon-fridge" .}}
+                                {{ end}}
+                                {{ if eq .Icon "icon-sofa"}}
+                                {{template "icon-sofa" .}}
+                                {{ end}}
+                                {{ if eq .Icon "icon-bed"}}
+                                {{template "icon-bed" .}}
+                                {{ end}}
+                                <p>{{.Description}}</p>
+                            </div>
+                            <div class="card__footer">
+                                <a href="{{.Url}}" class="btn" title="{{.Name}} in Leelanau County, Michigan" aria-label="{{.Name}} in Leelanau County, Michigan">{{.Name}}</a>
+                            </div>
+                        </a> <!-- end a-->
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            {{ end}}
+        </div>
+    </div>
+</section>
+{{ end}}

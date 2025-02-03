@@ -1,0 +1,40 @@
+{
+    "services": [
+        {
+            "name": "Home Remodel",
+            "url": "/services/home-remodeling-leelanau-county",
+            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "icon": "icon-home"
+        },
+        {
+            "name": "Bathroom Remodel",
+            "url": "/services/bathroom-remodeling-leelanau-county",
+            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "icon": "icon-bathroom"
+        },
+        {
+            "name": "Closet Remodel",
+            "url": "/services/closet-remodeling-leelanau-county",
+            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "icon": "icon-closet"
+        },
+        {
+            "name": "Kitchen Remodel",
+            "url": "/services/kitchen-remodeling-leelanau-county",
+            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "icon": "icon-fridge"
+        },
+        {
+            "name": "Living Room Remodel",
+            "url": "/services/home-remodeling-leelanau-county",
+            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "icon": "icon-sofa"
+        },
+        {
+            "name": "Bedroom Remodel",
+            "url": "/services/bedroom-remodeling-leelanau-county",
+            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "icon": "icon-bed"
+        }
+    ]
+}

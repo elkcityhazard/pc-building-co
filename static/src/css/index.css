@@ -1,0 +1,12 @@
+@import url("./reset");
+@import url("./colors");
+@import url("./typography");
+@import url("./layout.css");
+@import url("./image");
+@import url("./home-header");
+@import url("./main-nav");
+@import url("./home-services");
+@import url("./services");
+@import url("./gallery-work");
+@import url("./testimonial");
+@import url("./footer");

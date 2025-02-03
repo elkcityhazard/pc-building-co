@@ -1,0 +1,22 @@
+
+:root {
+/* CSS HEX */
+--white: #fff;
+--black: #000;
+--drab-dark-brown: #413620ff;
+--golden-brown: #9c6615ff;
+--golden-brown-2: #9f7833ff;
+--sunset: #ffd791ff;
+--french-gray: #cdd1deff;
+
+/* CSS HSL */
+--drab-dark-brown: hsla(40, 34%, 19%, 1);
+--golden-brown: hsla(36, 76%, 35%, 1);
+--golden-brown-2: hsla(38, 51%, 41%, 1);
+--sunset: hsla(38, 100%, 78%, 1);
+--sunset-9: hsla(38, 100%, 78%, 0.9);
+--sunset-8: hsla(38, 100%, 78%, 0.8);
+--french-gray: hsla(226, 20%, 84%, 1);
+
+}
+

@@ -1,0 +1,42 @@
+const path = require("path")
+
+module.exports = {
+    mode: process.env.environment === "production" ? "production" : "development",
+    entry: {
+        src: path.join(__dirname, "static/src/scripts"),
+    },
+    output: {
+        path: path.join(__dirname, "static/dist"),
+        filename: "index.js"
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        "postcss-preset-env", 
+                                        {
+                                            // options
+                                        }
+                                    ]
+                                ],
+                            },
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.png|jpe?g|gif|webp|svg|bmp|tiff/,
+                use: "file-loader"
+            }
+        ],
+    }
+}

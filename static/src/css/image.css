@@ -1,0 +1,7 @@
+.responsive-img {
+    display: block;
+    width: 100%;
+    @media screen  and (min-width: calc(768 / 16 * 1rem)) {
+        width: initial;
+    }
+}

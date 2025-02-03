@@ -1,0 +1,51 @@
+{{define "main-nav"}}
+<div class="nav-bar desktop">
+    {{with index .StringMap "SiteTitle"}}
+    <a href="/" class="logo" title="PC Building Company - Home Remodeling In Leelanau County, MI" aria-label="PC Building Company - Home Remodeling In Leelanau County, MI">PC Building Co.</a>
+    {{ end }}
+    {{with .Data.MainNav}}
+    <nav 
+    class="nav-bar__main-nav" 
+    id="mainNav" 
+    aria-disabled="false" 
+    aria-expanded="true"
+    itemscope 
+    itemtype="https://schema.org/SiteNavigationElement"
+    >
+        <ul class="nav-bar__main-nav__group">
+            {{range .NavItems}}
+        <li class="nav-bar__main-nav__item" itemprop="name">
+            <a 
+            href="{{.Url}}" 
+            class="nav-bar__main-nav__link {{if .Children}}parent{{end}}" 
+            title="link to: {{.Name}}" 
+            aria-label="link to: {{.Name}}"
+            itemprop="url"
+            >
+            {{.Name}} {{if .Children}}{{template "nav-arrow-down"}}{{end}}
+            </a>
+            {{ with .Children }}
+            <ul>
+                {{ range . }}
+                    <li class="nav-bar__main-nav__item" itemprop="name">
+            <a 
+            href="{{.Url}}" 
+            class="nav-bar__main-nav__link" 
+            title="link to: {{.Name}}" 
+            aria-label="link to: {{.Name}}"
+            itemprop="url"
+            >
+            {{.Name}}
+            </a>
+            </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </li>
+            {{end}}
+        </ul>
+    </nav>
+    {{ end }}
+    {{template "phone" . }}
+</div>
+{{ end }}

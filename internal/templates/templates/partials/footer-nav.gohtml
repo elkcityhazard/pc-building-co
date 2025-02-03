@@ -1,0 +1,46 @@
+{{define "footer-nav"}}
+<h3>Navigation</h3>
+  {{with .Data.MainNav}}
+    <nav 
+    class="footer__nav" 
+    id="footerNav" 
+    aria-disabled="false" 
+    aria-expanded="true"
+    itemscope 
+    itemtype="https://schema.org/SiteNavigationElement"
+    >
+        <ul class="footer__nav-group">
+            {{range .NavItems}}
+        <li class="footer__nav-item" itemprop="name">
+            <a 
+            href="{{.Url}}" 
+            class="footer__nav-link {{if .Children}}parent{{end}}" 
+            title="link to: {{.Name}}" 
+            aria-label="link to: {{.Name}}"
+            itemprop="url"
+            >
+            {{.Name}}
+            </a>
+            {{ with .Children }}
+            <ul class="footer__subnav-group">
+                {{ range . }}
+                    <li class="footer__subnav-item" itemprop="name">
+            <a 
+            href="{{.Url}}" 
+            class="footer__subnav-link" 
+            title="link to: {{.Name}}" 
+            aria-label="link to: {{.Name}}"
+            itemprop="url"
+            >
+            {{.Name}}
+            </a>
+            </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </li>
+            {{end}}
+        </ul>
+    </nav>
+    {{ end }}
+{{ end }}

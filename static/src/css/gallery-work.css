@@ -1,0 +1,95 @@
+.gallery {
+    background: var(--golden-brown);
+    padding-inline: var(--spacing-md);
+    padding-block: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    hgroup {
+        width: fit-content;
+        p {
+            color: var(--white);
+        }
+         hr {
+            color: var(--french-gray);
+            display: block;
+            margin-block: var(--spacing-md);
+            width: 100%;
+        }
+    }
+    h2 {
+        color: var(--white);
+    }
+    > img {
+        display: none;
+        @media screen and (min-width: calc(968 / 16 * 1rem)) {
+            display: inline-block;
+        }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-52%, -50%) scale(1.05);
+        opacity: 0.05;
+        object-fit: cover;
+        z-index: -1;
+        transition: all 350ms;
+    }
+    &:hover {
+        > img {
+            opacity: 0.15;
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
+}
+
+
+#galleryWork {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-inline: auto;
+    margin: auto;
+    a {
+            cursor: pointer;
+            transition: all 250ms;
+    
+            &:nth-child(2n+1) {
+                &:hover,
+                &:active {
+                    transform: scale(1.04) rotateZ(2deg);
+                }
+            }
+            &:nth-child(2n) {
+                &:hover,
+                &:active {
+                    transform: scale(1.04) rotateZ(-2deg);
+                }
+            }
+        }
+    a {
+        min-height: calc(191 / 16 * 1rem);
+    }    
+    a > img {
+        box-shadow: 0 0 20px -10px #000;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 350ms;
+        transform: translateX(-5%);
+        &.fadeUp {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @media screen and (min-width: calc(499 / 16 * 1rem)) {
+        grid-template-columns: repeat(auto-fit, minmax(calc(50% - 1rem), 1fr));
+        
+    }
+    @media screen and (min-width: calc(767 / 16 * 1rem)) {
+        grid-template-columns: repeat(auto-fit, minmax(calc(33% - 1rem), 1fr));
+        
+    }
+    @media screen and (min-width: calc(968 / 16 * 1rem)) {
+        grid-template-columns: repeat(auto-fit, minmax(calc(25% - 1rem), 1fr));
+        
+    }
+}

@@ -1,0 +1,27 @@
+{{define "home-header"}}
+<header id="homeHeader" class="home-header" {{with .Data.FrontMatter.BgImage}}data-bg="{{.}}"{{end}}>
+    <div class="home-header__inner">
+        <div class="row">
+            <div class="col">
+            <hgroup>
+                {{with index .StringMap "PageTitle"}}
+            <h1>{{.}}</h1>
+            {{end}}
+            {{ with index .StringMap "PageSubtitle"}}
+                <p>{{.}}</p>
+            {{ end }}
+            </hgroup>
+            
+            </div>
+            <div class="col">
+                {{ with index .StringMap "PhoneNumber"}}
+                <a href="tel:{{.}}" class="btn primary" title="Call PC Building Company" aria-label="Call PC Building Company">Call Now</a>
+                {{ end }}
+                {{ with index .StringMap "ContactLink"}}
+                <a href="{{.}}" class="btn primary" title="Contact PC Building Company" aria-label="Contact PC Building Company">Contact Us</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</header>
+{{ end}}

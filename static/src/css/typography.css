@@ -1,0 +1,187 @@
+
+@font-face {
+    src: 
+    local("Great Vibes"),
+    url("/static/fonts/great-vibes/GreatVibes-Regular.otf") format('opentype');
+    font-family: 'Great Vibes';
+    font-display: optional;
+}
+:root {
+    --spacing-none: 0rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.75rem;
+    --spacing-default: 1rem;
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 1.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+    font-weight: normal;
+    margin-block: 0.5rem;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-family: 'Phudu', display;
+    font-size: clamp(2rem, 0.8651rem + 5.1867vw, 4rem);
+    font-weight: bolder;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 1.0590rem + 3.6971vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.4rem, 1.2339rem + 0.8889vw, 1.66rem);
+}
+
+article,
+section,
+div,
+p,
+span,
+a {
+    font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+    font-weight: normal;
+}
+
+a {
+    color: var(--drab-dark-brown);
+    font-weight: bold;
+    transition: all 250ms;
+    &:hover,
+    &:active {
+        color: var(--golden-brown);
+    }
+}
+
+.col:has(.btn) {
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: stretch;
+    @media screen and (min-width: calc(499 / 16 * 1rem)) {
+        flex-flow: row nowrap;
+    }
+    justify-content: center;
+    gap: var(--spacing-default);
+    .btn {
+        flex: 1 0 50%;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+.btn {
+    background: var(--drab-dark-brown);
+    color: var(--french-gray);
+    padding-block: var(--spacing-xs);
+    padding-inline: var(--spacing-xs);
+    transition: all 250ms;
+    &:hover,
+    &:active {
+        background: var(--golden-brown-2);
+        color: var(--white);
+    }
+    &:focus {
+        outline: 1px dotted var(--black);
+    }
+    &.primary {
+        border-radius: 0rem 1rem 0rem 1rem;
+        box-shadow: 0 0 20px -10px #000;
+        padding-block: var(--spacing-md);
+        padding-inline: var(--spacing-md);
+    }
+    &.primary:hover,
+    &.primary:active {
+            
+            box-shadow: 0 0 20px -5px #000;
+            transform: rotateZ(-2deg);
+        }
+        color: var(--sunset);
+                    &:hover,
+                    &:active {
+                        background: var(--sunset);
+                        color: var(--drab-dark-brown);
+                    }
+    &.phone {
+        background: var(--sunset);
+        box-shadow: 0 0 10px -2px #000;
+        color: var(--drab-dark-brown);
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        letter-spacing: calc(1 / 16 *1rem);
+        justify-content: center;
+        gap: var(--spacing-sm);
+        padding-block: var(--spacing-default);
+        padding-inline: var(--spacing-default);
+        transition: all 250ms;
+        > .icon {
+            transition: inherit;
+            &.phone {
+                transition: inherit;
+                stroke: var(--golden-brown-2);
+                > path {
+                    transition: inherit;
+                    fill: var(--drab-dark-brown);
+                }
+                
+            }
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background: var(--golden-brown);
+            color: var(--sunset);
+            > .icon {
+                &.phone {
+                    stroke: var(--sunset);
+                    > path {
+                        fill: var(--golden-brown-2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.logo {
+    font-family: 'Great Vibes', handwriting;
+    text-decoration: none;
+    color: var(--sunset);
+    font-size:clamp(1.25rem, 0.7708rem + 2.5641vw, 2rem);
+    font-weight: bold;
+    transition: all 350ms;
+    &:hover,
+    &:active {
+        color: var(--golden-brown-2);
+    }
+    &:focus {
+        outline: 1px dotted var(--black);
+    }
+}
+
+
+#content {
+    .article {
+        ul,
+        li,
+        ol,
+        dd,
+        span,
+        a,
+        p {
+            font-size: clamp(1.1rem, 1.0032rem + 0.6190vw, 1.3rem);
+        }
+    }
+}
+
+

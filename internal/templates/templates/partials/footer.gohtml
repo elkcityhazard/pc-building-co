@@ -1,0 +1,25 @@
+{{define "footer"}}
+<footer class="footer" id="footer">
+    <div class="footer__inner">
+        <div class="row">
+            <hgroup>
+                <h3>{{with index .StringMap "PageTitle"}}{{.}}{{end}}</h3>
+            </hgroup>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{template "footer-nav" .}}
+            </div>
+            <div class="col">
+                {{ template "address" .}}
+            </div>
+            <div class="col">
+                {{template "footer-social" .}}
+            </div>
+        </div>
+        <div class="row">
+         <p class="copyright">&copy; {{getYear }} Website Designed & Developed By <a href="https://andrew-mccall.com" title="traverse city web development" aria-label="link to: traverse city web development">andrew m mccall</a></p>
+        </div>
+    </div>
+</footer>
+{{ end }}
