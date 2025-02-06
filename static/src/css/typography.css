@@ -42,6 +42,7 @@ h3 {
     font-size: clamp(1.4rem, 1.2339rem + 0.8889vw, 1.66rem);
 }
 
+
 article,
 section,
 div,
@@ -170,8 +171,8 @@ a {
 }
 
 
-#content {
     .article {
+        padding-inline: var(--spacing-sm);
         ul,
         li,
         ol,
@@ -182,6 +183,6 @@ a {
             font-size: clamp(1.1rem, 1.0032rem + 0.6190vw, 1.3rem);
         }
     }
-}
+
 
 

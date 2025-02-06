@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"html"
 	"net/http"
+	"os"
+	"path/filepath"
 
 	"github.com/elkcityhazard/pc-building-company/internal/handlers"
 	"github.com/go-chi/chi/v5"
@@ -14,6 +16,7 @@ func routes() http.Handler {
 	mux := chi.NewMux()
 	mux.Use(middleware.Recoverer)
 	mux.Use(preventStaticDirBrowsing)
+	mux.Use(middleware.Compress(5))
 
 	fileServer := http.FileServer(http.Dir("./static"))
 	mux.Handle("/static/*", http.StripPrefix("/static/", fileServer))
@@ -24,7 +27,25 @@ func routes() http.Handler {
 	mux.HandleFunc("/services", handlers.Repo.HandleGetServices)
 	mux.HandleFunc("/services/{service}", handlers.Repo.HandleGetService)
 
-	mux.HandleFunc("/robots.txt", handlers.Repo.HandleGetRobots)
+	mux.Handle("/robots.txt", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		cwd, err := os.Getwd()
+		if err != nil {
+			http.NotFound(w, r)
+			return
+		}
+		http.ServeFile(w, r, filepath.Join(cwd, "robots.txt"))
+
+	}))
+	mux.Handle("/ads.txt", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		cwd, err := os.Getwd()
+
+		if err != nil {
+			http.NotFound(w, r)
+			return
+		}
+
+		http.ServeFile(w, r, filepath.Join(cwd, "ads.txt"))
+	}))
 	mux.NotFound(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		app.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
 		app.Renderer.SetStringMapEntry("ContactLink", "/contact")
