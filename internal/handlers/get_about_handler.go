@@ -24,9 +24,7 @@ func (hr *HandlerRepo) GetAboutHandler(w http.ResponseWriter, r *http.Request) {
 
 	defer aboutMD.Close()
 
-	type FrontMatter struct {
-		models.DefaultFrontMatter
-	}
+	type FrontMatter models.DefaultFrontMatter
 
 	var fm FrontMatter
 

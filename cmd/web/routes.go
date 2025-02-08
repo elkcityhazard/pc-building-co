@@ -16,6 +16,7 @@ func routes() http.Handler {
 	mux := chi.NewMux()
 	mux.Use(middleware.Recoverer)
 	mux.Use(preventStaticDirBrowsing)
+	mux.Use(staticCacheMiddleware)
 	mux.Use(middleware.Compress(5))
 
 	fileServer := http.FileServer(http.Dir("./static"))
