@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"bufio"
 	"html"
 	"log"
 	"net/http"
@@ -8,7 +9,6 @@ import (
 
 	"github.com/adrg/frontmatter"
 	"github.com/elkcityhazard/pc-building-company/content"
-	"github.com/elkcityhazard/pc-building-company/internal/models"
 )
 
 func (hr *HandlerRepo) HandleGetServices(w http.ResponseWriter, r *http.Request) {
@@ -29,15 +29,28 @@ func (hr *HandlerRepo) HandleGetServices(w http.ResponseWriter, r *http.Request)
 		Image string `yaml:"image"`
 	}
 
-	type Front struct {
-		models.DefaultFrontMatter
-		Content []Content `yaml:"content"`
+	type DefaultWithContent struct {
+		Title           string    `yaml:"title"`
+		Description     string    `yaml:"description"`
+		URL             string    `yaml:"url"`
+		MetaImage       string    `yaml:"metaImage"`
+		MetaImageAlt    string    `yaml:"metaImageAlt"`
+		Author          string    `yaml:"author"`
+		PublishDate     string    `yaml:"publishDate"`
+		UpdateDate      string    `yaml:"updateDate"`
+		BgImage         string    `yaml:"bgImage"`
+		TwitterUsername string    `yaml:"twitterUsername"`
+		Content         []Content `yaml:"content"`
 	}
 
-	var fm Front
+	var fm DefaultWithContent
 
-	_, err = frontmatter.Parse(contentFile, &fm)
+	_, err = frontmatter.Parse(bufio.NewReader(contentFile), &fm)
 
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
 	hr.Cfg.Renderer.SetDataMapEntry("FrontMatter", fm)
 	hr.Cfg.Renderer.SetDataMapEntry("Content", hr.Cfg.MarkdownData["services.md"])

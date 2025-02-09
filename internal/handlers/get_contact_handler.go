@@ -17,7 +17,7 @@ func (hr *HandlerRepo) GetContactHandler(w http.ResponseWriter, r *http.Request)
 		models.DefaultFrontMatter
 	}
 
-	var matter Matter
+	var matter models.DefaultFrontMatter
 
 	contentFS := content.GetContentFS()
 
