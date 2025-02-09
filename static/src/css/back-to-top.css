@@ -1,0 +1,41 @@
+.navigation {
+    background: var(--drab-dark-brown);
+    border: 1px solid var(--golden-brown-2);
+    border-radius: 50%;
+    box-shadow: 0 0 10px -5px #000;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    height: 40px;
+    width: 40px;
+    transition: all 350ms;
+    &.top {
+        .icon {
+            &.arrow-up {
+                height: 32px;
+                width: 32px;
+                    stroke: var(--golden-brown);
+                path {
+                    transition: all 350ms;
+                   stroke: var(--sunset);
+                }
+            }
+        }
+    }
+    &:hover,
+    &:active {
+        &.top {
+            .icon {
+                &.arrow-up {
+                path {
+                    stroke: var(--golden-brown);
+                    }
+                }
+            }
+        }
+    }
+}
