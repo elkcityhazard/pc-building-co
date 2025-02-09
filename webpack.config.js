@@ -1,6 +1,6 @@
 const path = require("path");
 
-if (process.env.environment === "production") {
+if (process.env.NODE_ENV === "production") {
   new webpack.optimize.CommonsChunkPlugin("common.js"),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
@@ -16,7 +16,7 @@ if (process.env.environment === "production") {
 }
 
 module.exports = {
-  mode: process.env.environment === "production" ? "production" : "development",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: {
     src: path.join(__dirname, "static/src/scripts"),
   },
