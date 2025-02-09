@@ -18,6 +18,8 @@ func (hr *HandlerRepo) HandleGetService(w http.ResponseWriter, r *http.Request) 
 
 	fname := fmt.Sprintf("%s.md", serviceName)
 
+	fmt.Println(fname)
+
 	contentFile, err := content.GetContentFS().Open(filepath.Join("content", fname))
 
 	if err != nil {

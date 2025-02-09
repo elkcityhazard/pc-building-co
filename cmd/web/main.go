@@ -201,8 +201,6 @@ func parseMarkdownSet(app *config.AppConfig) {
 			continue
 		}
 
-		fmt.Printf("%v\n", strings.LastIndex(string(file), "---\n"))
-
 		body := string(file)[strings.LastIndex(string(file), "---\n")+4:]
 
 		err = goldmark.Convert([]byte(body), &buf)
@@ -216,5 +214,7 @@ func parseMarkdownSet(app *config.AppConfig) {
 	}
 
 	app.MarkdownData = mdSet
+
+	//fmt.Printf("Map: %+v\n", app.MarkdownData["kitchen-remodeling-leelanau-county.md"])
 
 }

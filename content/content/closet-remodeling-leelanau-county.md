@@ -8,7 +8,6 @@ author: "Andrew M McCall"
 publishDate: 2025-02-02
 updateDate: 2025-02-02
 bgImage: "/static/images/closet_remodel_1920_600.jpg"
-
 ---
 
 ## Transform Your Storage Space with Custom Closets
