@@ -30,7 +30,7 @@
     <meta name="twitter:image:alt" content="{{with .Data.FrontMatter.MetaImageAlt}}{{.}}{{else}}og:image alt test here{{end}}">
     
      <!--/twiiter-->
-    <title>{{ with index .StringMap "PageTitle"}}{{.}}{{end}}{{with index .StringMap "SiteTitle"}} - {{.}}{{end}}</title>
+    <title>{{ with index .Data.FrontMatter "Title"}}{{.}}{{end}}{{with index .StringMap "SiteTitle"}} - {{.}}{{end}}</title>
     <link rel="stylesheet" href="/static/dist/css/index.css">
     <link rel="preload" href="/static/images/a-home-with-a-grassy-lawn.webp" as="image">
     <script></script>
