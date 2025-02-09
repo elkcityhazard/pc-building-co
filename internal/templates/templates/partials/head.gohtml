@@ -11,7 +11,7 @@
      <meta property="og:url" content="{{index .StringMap "BaseURL"}}{{.Data.FrontMatter.URL}}">
      <meta property="og:type" content="website">
      <meta property="og:title" content="{{with .Data.FrontMatter.Title}}{{.}}{{else}}{{end}}">
-     <meta property="og:image" content="{{with .Data.FrontMatter.MetaImage}}{{.}}{{else}}{{end}}">
+     <meta property="og:image" content="{{with .Data.FrontMatter.MetaImage}}{{. | concatBaseURL }}{{else}}{{end}}">
      <meta property="og:image:alt" content="{{with .Data.FrontMatter.MetaImageAlt}}{{.}}{{else}}og:image alt test here{{end}}">
      <meta property="og:description" content="{{with .Data.FrontMatter.Description}}{{.}}{{end}}">
      <meta property="og:site_name" content="{{index .StringMap "SiteTitle"}}">
@@ -26,7 +26,7 @@
     <meta name="twitter:url" content="{{index .StringMap "BaseURL"}}{{.Data.FrontMatter.URL}}">
     <meta name="twitter:title" content="{{with .Data.FrontMatter.Title}}{{.}}{{end}}">
     <meta name="twitter:description" content="{{with .Data.FrontMatter.Description}}{{.}}{{end}}">
-    <meta name="twitter:image" content="{{with .Data.FrontMatter.MetaImage}}{{.}}{{else}}{{end}}">
+    <meta name="twitter:image" content="{{with .Data.FrontMatter.MetaImage}}{{. | concatBaseURL}}{{else}}{{end}}">
     <meta name="twitter:image:alt" content="{{with .Data.FrontMatter.MetaImageAlt}}{{.}}{{else}}og:image alt test here{{end}}">
     
      <!--/twiiter-->

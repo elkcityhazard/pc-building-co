@@ -2,7 +2,7 @@
 title: PC Building Company - Closet Remodels in Leelanau County, MI
 description: "PC Building Company is a builder that specializes in closet remodels in Leelanau County, Michigan"
 url: "/services/closet-remodeling-leelanau-county"
-metaImage: "static/images/a-home-with-a-grassy-lawn.webp"
+metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
 author: "Andrew M McCall"
 publishDate: 2025-02-02

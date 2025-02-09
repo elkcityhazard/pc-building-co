@@ -11,6 +11,7 @@ func parseFlags(app *config.AppConfig) {
 	flag.StringVar(&app.WebsiteName, "website_name", "My Cool Website", "the name you want to give to your website")
 	flag.StringVar(&app.WebsiteAddress, "website_url", "http://localhost", "the base url for the site")
 	flag.BoolVar(&app.IsProduction, "is_production", false, "set environment(development|production)")
+	flag.StringVar(&app.Port, "port", ":8080", "the port the application runs on (:6587)")
 	flag.Parse()
 
 }

@@ -52,6 +52,9 @@ func main() {
 		"getYear": func() int {
 			return time.Now().Year()
 		},
+		"concatBaseURL": func(s string) string {
+			return app.WebsiteAddress + s
+		},
 	}
 
 	_, err := app.Renderer.CreateTemplateCache()
