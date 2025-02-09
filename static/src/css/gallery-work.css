@@ -67,6 +67,8 @@
             }
         }
     a {
+        margin: auto;
+        text-align: center;
         min-height: calc(191 / 16 * 1rem);
     }    
     a > img {
