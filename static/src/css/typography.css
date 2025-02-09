@@ -28,9 +28,9 @@ h6 {
 }
 
 h1 {
-    font-family: 'Phudu', display;
+    /* font-family: 'Phudu', display; */
     font-size: clamp(2rem, 0.8651rem + 5.1867vw, 4rem);
-    font-weight: bolder;
+    font-weight: normal;
     line-height: 1.25;
 }
 
