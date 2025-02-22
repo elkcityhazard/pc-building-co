@@ -1,6 +1,6 @@
 ---
-title: PC Building Company - Bedroom Remodeling in Leelanau County, Michigan
-description: "PC Building Company is a builder that specializes in bedroom remodels in Leelanau County, Michigan"
+title: P.C. Building Company - Bedroom Remodeling in Leelanau County, Michigan
+description: "P.C. Building Company is a builder that specializes in bedroom remodels in Leelanau County, Michigan"
 url: "/services/bedroom-remodeling-leelanau-county"
 metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
@@ -12,13 +12,12 @@ bgImage: "/static/images/bedroom_remodel_1920_1280.jpg"
 
 ## Create Your Dream Bedroom Retreat
 
-At PC Building Company, we specialize in transforming bedrooms into luxurious sanctuaries for homeowners in Leelanau County. Our expert team combines creativity, craftsmanship, and local expertise to deliver custom bedrooms that exceed expectations.
+At P.C. Building Company, we specialize in transforming bedrooms into luxurious sanctuaries for homeowners in Leelanau County. Our expert team combines creativity, craftsmanship, and local expertise to deliver custom bedrooms that exceed expectations.
 
 ### Our Bedroom Remodel Services:
 
 1. **Personalized Design Consultation**
    - Tailored plans to match your style and needs
-   - 3D modeling for realistic previews
 
 2. **Custom Built-Ins and Storage Solutions**
    - Bespoke wardrobes and dressers
@@ -48,7 +47,7 @@ At PC Building Company, we specialize in transforming bedrooms into luxurious sa
    - Automated window treatments
    - Climate control and sound systems
 
-## Why Choose PC Building Company for Your Bedroom Renovation in Leelanau County?
+## Why Choose P.C. Building Company for Your Bedroom Renovation in Leelanau County?
 
 - 20+ years of experience in luxury home improvements
 - Dedicated project management for smooth execution
@@ -68,8 +67,8 @@ At PC Building Company, we specialize in transforming bedrooms into luxurious sa
 
 ## Ready to Start Your Bedroom Remodel?
 
-Contact PC Building Company today for a complimentary consultation. Let us bring your dream bedroom to life in Leelanau County. Whether you're envisioning a complete bedroom renovation or a partial update, our team is committed to delivering exceptional results.
+Contact P.C. Building Company today for a complimentary consultation. Let us bring your dream bedroom to life in Leelanau County. Whether you're envisioning a complete bedroom renovation or a partial update, our team is committed to delivering exceptional results.
 
-*PC Building Company - Elevating Bedroom Remodels in Leelanau County to New Heights of Luxury and Comfort*
+*P.C. Building Company - Elevating Bedroom Remodels in Leelanau County to New Heights of Luxury and Comfort*
 
 

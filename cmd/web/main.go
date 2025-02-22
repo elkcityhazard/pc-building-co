@@ -31,7 +31,6 @@ func main() {
 	app.Renderer.CreateTemplateCache()
 	app.Renderer.UseCache = app.IsProduction
 	app.Renderer.SetIsProduction(app.IsProduction)
-	app.Renderer.SetStringMapEntry("PageTitle", "PC Building Company")
 	app.Renderer.SetDirPaths("templates/pages", "templates/layouts", "templates/partials", "gohtml")
 	app.Renderer.TemplateFuncs = template.FuncMap{
 		"humanPhone": func(ph string) string {

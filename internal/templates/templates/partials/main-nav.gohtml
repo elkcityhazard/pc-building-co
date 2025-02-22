@@ -1,7 +1,7 @@
 {{define "main-nav"}}
 <div class="nav-bar desktop">
     {{with index .StringMap "SiteTitle"}}
-    <a href="/" class="logo" title="PC Building Company - Home Remodeling In Leelanau County, MI" aria-label="PC Building Company - Home Remodeling In Leelanau County, MI">PC Building Co.</a>
+    <a href="/" class="logo" title="PC Building Company - Home Remodeling In Leelanau County, MI" aria-label="PC Building Company - Home Remodeling In Leelanau County, MI">{{.}}</a>
     {{ end }}
     {{with .Data.MainNav}}
     <nav 

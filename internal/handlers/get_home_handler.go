@@ -42,7 +42,7 @@ func (hr *HandlerRepo) GetHomeHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
+	hr.Cfg.Renderer.SetStringMapEntry("PageTitle", hr.Cfg.WebsiteName)
 	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
 	hr.Cfg.Renderer.SetDataMapEntry("FrontMatter", fm)
 	err = hr.Cfg.Renderer.RenderTemplate(w, r, "home.gohtml")
