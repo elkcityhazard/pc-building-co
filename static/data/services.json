@@ -1,40 +1,22 @@
 {
-    "services": [
+    "services": [ 
         {
-            "name": "Home Remodel",
+            "name": "Home Building Services",
             "url": "/services/home-remodeling-leelanau-county",
-            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "description": "Home Refurbishment, home rehabitation, home revitalization in Leelanau County, Michigan. We are a full service home building company in Leelanau County, Michigan for new home builds.",
             "icon": "icon-home"
         },
         {
-            "name": "Bathroom Remodel",
+            "name": "Refurbishment Services",
             "url": "/services/bathroom-remodeling-leelanau-county",
-            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "description": "We provide home refurbishment services in Leelanau county, Michigan.  We update fixtures such as vanities, lights, cabinets and more.",
             "icon": "icon-bathroom"
         },
         {
-            "name": "Closet Remodel",
-            "url": "/services/closet-remodeling-leelanau-county",
-            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
-            "icon": "icon-closet"
-        },
-        {
-            "name": "Kitchen Remodel",
+            "name": "Rehabitation Services",
             "url": "/services/kitchen-remodeling-leelanau-county",
-            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
+            "description": "We provide home rehabitation services in Leelanau County, Michigan. This includes kitchen and bathroom remodels as well as updates and enhancements to other occupied and unoccupied living spaces.",
             "icon": "icon-fridge"
-        },
-        {
-            "name": "Living Room Remodel",
-            "url": "/services/home-remodeling-leelanau-county",
-            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
-            "icon": "icon-sofa"
-        },
-        {
-            "name": "Bedroom Remodel",
-            "url": "/services/bedroom-remodeling-leelanau-county",
-            "description": "From bathrooms, kitchens, to enclosed porches we have a variety of remodel services that will suite your luxury home remodel needs in Leelanau County",
-            "icon": "icon-bed"
         }
     ]
 }

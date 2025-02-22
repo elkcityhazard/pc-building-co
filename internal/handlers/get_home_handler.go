@@ -24,31 +24,26 @@ type Service struct {
 }
 
 func (hr *HandlerRepo) GetHomeHandler(w http.ResponseWriter, r *http.Request) {
-
 	var fm models.DefaultFrontMatter
 
 	contentFiles := content.GetContentFS()
 
 	f, err := contentFiles.Open("content/home.md")
-
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	_, err = frontmatter.Parse(bufio.NewReader(f), &fm)
-
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	hr.Cfg.Renderer.SetStringMapEntry("PageTitle", hr.Cfg.WebsiteName)
-	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
+	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("P.C. Building Company is a home builder located in Lake Leelanua, MI serving Leelanau County"))
 	hr.Cfg.Renderer.SetDataMapEntry("FrontMatter", fm)
 	err = hr.Cfg.Renderer.RenderTemplate(w, r, "home.gohtml")
-
 	if err != nil {
 		log.Fatalln(err)
 	}
-
 }
