@@ -20,6 +20,7 @@ import (
 	"github.com/elkcityhazard/pc-building-company/internal/handlers"
 	"github.com/elkcityhazard/pc-building-company/internal/models"
 	"github.com/elkcityhazard/pc-building-company/internal/templates"
+	"github.com/elkcityhazard/pc-building-company/pkg/mailer"
 	"github.com/yuin/goldmark"
 )
 
@@ -93,7 +94,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	app.Renderer.SetStringMapEntry("ContactLink", "/contact")
+	app.Renderer.SetStringMapEntry("ContactLink", "/contact#contactForm")
 	app.Renderer.SetStringMapEntry("PhoneNumber", "+12313576340")
 	app.Renderer.SetDataMapEntry("Services", services)
 
@@ -108,6 +109,16 @@ func main() {
 
 	handlerRepo := handlers.NewHandlerRepo(app, nil)
 	handlers.SetHandlerRepo(handlerRepo)
+
+	mailer := mailer.NewMailer(app.SMTPHost, app.SMTPUsername, app.SMTPPassword, app.SMTPPort)
+
+	mailer.NewDialer()
+
+	app.WG.Add(1)
+	go mailer.ListenForMail(app.MailMsgChan, app.MailErrChan, app.MailDoneChan, &app.WG)
+
+	app.WG.Add(1)
+	go app.ListenForErrors()
 
 	srv := &http.Server{
 		Addr:              app.Port,
@@ -130,16 +141,7 @@ func newMainNavigation(app *config.AppConfig) {
 	navList := models.NewNavList()
 
 	navList.New(models.NewNavItem("Services", "/services", 0))
-
-	navList.AddChildrenToItem("services", models.NewNavItem("Home Remodel", "/services/home-remodeling-leelanau-county", 1))
-	navList.AddChildrenToItem("services", models.NewNavItem("Bathroom Remodel", "/services/bathroom-remodeling-leelanau-county", 2))
-	navList.AddChildrenToItem("services", models.NewNavItem("Bedroom Remodel", "/services/bedroom-remodeling-leelanau-county", 3))
-	navList.AddChildrenToItem("services", models.NewNavItem("Closet Remodel", "/services/closet-remodeling-leelanau-county", 4))
-	navList.AddChildrenToItem("services", models.NewNavItem("Kitchen Remodel", "/services/kitchen-remodeling-leelanau-county", 5))
-
-	navList.NavItems = append(navList.NavItems, models.NewNavItem("About", "/about", 1))
 	navList.NavItems = append(navList.NavItems, models.NewNavItem("Contact", "/contact", 1))
-
 	app.Renderer.SetDataMapEntry("MainNav", navList)
 }
 
@@ -213,7 +215,5 @@ func parseMarkdownSet(app *config.AppConfig) {
 	}
 
 	app.MarkdownData = mdSet
-
-	//fmt.Printf("Map: %+v\n", app.MarkdownData["kitchen-remodeling-leelanau-county.md"])
 
 }

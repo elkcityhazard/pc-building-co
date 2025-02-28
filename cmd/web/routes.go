@@ -17,6 +17,8 @@ func routes() http.Handler {
 	mux.Use(middleware.Recoverer)
 	mux.Use(preventStaticDirBrowsing)
 	mux.Use(staticCacheMiddleware)
+	mux.Use(NoSurf)
+	mux.Use(AddCSRFToken)
 	mux.Use(middleware.Compress(5))
 
 	fileServer := http.FileServer(http.Dir("./static"))
@@ -26,7 +28,8 @@ func routes() http.Handler {
 	mux.HandleFunc("/about", handlers.Repo.GetAboutHandler)
 	mux.HandleFunc("/contact", handlers.Repo.GetContactHandler)
 	mux.HandleFunc("/services", handlers.Repo.HandleGetServices)
-	mux.HandleFunc("/services/{service}", handlers.Repo.HandleGetService)
+	// mux.HandleFunc("/services/{service}", handlers.Repo.HandleGetService)
+	mux.Post("/contact", handlers.Repo.PostContactHandler)
 
 	mux.Handle("/robots.txt", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		cwd, err := os.Getwd()

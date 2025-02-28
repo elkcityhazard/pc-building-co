@@ -40,7 +40,7 @@ func (hr *HandlerRepo) GetHomeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	hr.Cfg.Renderer.SetStringMapEntry("PageTitle", hr.Cfg.WebsiteName)
-	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("P.C. Building Company is a home builder located in Lake Leelanua, MI serving Leelanau County"))
+	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString(fm.Description))
 	hr.Cfg.Renderer.SetDataMapEntry("FrontMatter", fm)
 	err = hr.Cfg.Renderer.RenderTemplate(w, r, "home.gohtml")
 	if err != nil {

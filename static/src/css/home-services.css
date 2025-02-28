@@ -26,16 +26,10 @@
         .row {
             display: grid;
             place-items: stretch center;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            @media screen and (min-width: calc(499 / 16 * 1rem)) {
-                grid-template-columns: repeat(auto-fit, minmax(calc(50% - 2rem), 1fr));
-            }
-            @media screen and (min-width: calc(767 / 16 * 1rem)) {
-                grid-template-columns: repeat(auto-fit, minmax(calc(33% - 3rem), 1fr));
-            }
+            grid-template-columns: repeat(auto-fit, minmax(min(calc(350 / 16 * 1rem), 100%), 1fr));
+            gap: var(--spacing-md);
             .col {
-                max-width: 100%;
+               
                 hgroup {
                     h2 {
                         font-size: clamp(1.5rem, 0.5415rem + 5.1282vw, 3rem);
@@ -56,6 +50,7 @@
                         color: inherit;
                         display: flex;
                         align-items: stretch;
+                        max-width: 100%;
                         flex-flow: column nowrap;
                         text-align: center;
                         a { 

@@ -1,0 +1,18 @@
+{{template "base" .}}
+
+{{ define "title"}}
+<h1>Thank You</h1>
+{{ end}}
+
+{{ define "content"}}
+<section class="thank-you">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Thank You, {{with index .StringMap "EmailAddress"}}{{.}}!{{else}}!{{end}}</h2>
+                <p>We Look forward to your inquiry. Note it can take a few business days for us to respond at a times. </p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

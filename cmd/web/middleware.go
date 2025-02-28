@@ -3,6 +3,8 @@ package main
 import (
 	"net/http"
 	"strings"
+
+	"github.com/justinas/nosurf"
 )
 
 var (
@@ -31,6 +33,28 @@ func staticCacheMiddleware(next http.Handler) http.Handler {
 		}
 
 		// Call the next handler in the chain
+		next.ServeHTTP(w, r)
+	})
+}
+
+func NoSurf(next http.Handler) http.Handler {
+	// new no surf
+	csrfHandler := nosurf.New(next)
+
+	// cookie config
+	csrfHandler.SetBaseCookie(http.Cookie{
+		HttpOnly: true,
+		Path:     "/",
+		Secure:   app.IsProduction,
+		SameSite: http.SameSiteLaxMode,
+	})
+
+	return csrfHandler
+}
+
+func AddCSRFToken(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		app.Renderer.AddCSRFToken(nosurf.Token(r))
 		next.ServeHTTP(w, r)
 	})
 }

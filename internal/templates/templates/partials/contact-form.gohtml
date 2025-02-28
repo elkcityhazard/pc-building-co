@@ -1,0 +1,41 @@
+{{define "contact-form"}}
+<section class="contact-form">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <header>
+                    <hgroup>
+                        <h2>Contact Us</h2>
+                        <p>We look forward to discussing your next project.  If you have any questions, or want to schedule a free consultation, fill out the contact form below</p>
+                    </hgroup>
+                    
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form id="contactForm" action="/contact" method="post">
+                    {{ with .CSRFToken }}
+                    <input type="hidden" name="csrf_token" value="{{.}}">
+                    <input type="hidden" name="username" value="">
+                    {{ end }}
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="{{with .Data.Form.Get "email"}}{{.}}{{end}}">
+                    {{with index .Data.FormErrors "email"}}<small class="error">{{index . 0 }}</small> {{ end }}
+                </div>
+                <div class="form-control">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="10">{{with .Data.Form.Get "message"}}{{.}}{{else}}Enter Message...{{end}}</textarea>
+                     {{with index .Data.FormErrors "message"}}<small class="error">{{index . 0 }}</small> {{ end }}
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="submit">
+                </div>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}

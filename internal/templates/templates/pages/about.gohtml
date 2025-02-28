@@ -1,7 +1,7 @@
 {{template "base" .}}
 
 {{ define "content"}}
-<article class="article">
+<section class="article">
         {{ with .Data.FrontMatter}}
         <h1 class="article__heading">{{.Title}}</h1>
     {{ end }}
@@ -10,5 +10,5 @@
         {{ . }}
     </article>
     {{ end}}
-    </article>
+    </section>
 {{ end }}

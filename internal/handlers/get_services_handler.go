@@ -22,11 +22,12 @@ func (hr *HandlerRepo) HandleGetServices(w http.ResponseWriter, r *http.Request)
 	defer contentFile.Close()
 
 	type Content struct {
-		ID    int    `yaml:"id"`
-		Name  string `yaml:"name"`
-		URL   string `yaml:"url"`
-		Text  string `yaml:"text"`
-		Image string `yaml:"image"`
+		ID       int      `yaml:"id"`
+		Name     string   `yaml:"name"`
+		URL      string   `yaml:"url"`
+		Services []string `yaml:"services"`
+		Text     string   `yaml:"text"`
+		Image    string   `yaml:"image"`
 	}
 
 	type DefaultWithContent struct {
@@ -51,7 +52,8 @@ func (hr *HandlerRepo) HandleGetServices(w http.ResponseWriter, r *http.Request)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
+	hr.Cfg.Renderer.SetStringMapEntry("PageTitle", html.EscapeString(fm.Title))
+	hr.Cfg.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString(fm.Description))
 	hr.Cfg.Renderer.SetDataMapEntry("FrontMatter", fm)
 	hr.Cfg.Renderer.SetDataMapEntry("Content", hr.Cfg.MarkdownData["services.md"])
 	err = hr.Cfg.Renderer.RenderTemplate(w, r, "services.gohtml")

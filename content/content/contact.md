@@ -1,13 +1,13 @@
 ---
-title: Contact PC Building Company
-description: "PC Building Company is a builder that specializes in home remodels in Leelanau County, Michigan"
+title: Contact P.C. Building Company
+description: "P.C. Building Company is a home building company located in Lake Leelanua, MI serving Leelanau County"
 url: "/contact"
-metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
+metaImage: "/static/images/kitchen_remodel_1920_1280.jpg"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
 author: "Andrew M McCall"
 publishDate: 2025-02-02
 updateDate: 2025-02-02
-bgImage: ""
+bgImage: "/static/images/kitchen_remodel_1920_1280.jpg"
 ---
 ## Contact Us
 
@@ -29,7 +29,7 @@ Choosing P.C. Building Company means partnering with a company that values quali
 
 ### Our Location:
 
-- P.O. Box # 47
+- P.O. Box #47
 - Lake Leelanau, MI 49653
 
 ### Contact Information:

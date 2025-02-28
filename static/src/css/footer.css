@@ -8,6 +8,9 @@
         font-family: 'Great Vibes', handwriting;
         text-align: center;
     }
+                p {
+                    text-align: center;
+                }
 
     address {
         ul {

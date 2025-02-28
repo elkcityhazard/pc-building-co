@@ -2,21 +2,21 @@
     "services": [ 
         {
             "name": "Home Building Services",
-            "url": "/services/home-remodeling-leelanau-county",
+            "url": "/contact",
             "description": "Home Refurbishment, home rehabitation, home revitalization in Leelanau County, Michigan. We are a full service home building company in Leelanau County, Michigan for new home builds.",
             "icon": "icon-home"
         },
         {
             "name": "Refurbishment Services",
-            "url": "/services/bathroom-remodeling-leelanau-county",
-            "description": "We provide home refurbishment services in Leelanau county, Michigan.  We update fixtures such as vanities, lights, cabinets and more.",
+            "url": "/contact",
+            "description": "We provide home refurbishment services in Leelanau county, Michigan.  We update fixtures such as vanities, lights, cabinets and more.  We specialize in high quality materials and custom building.",
             "icon": "icon-bathroom"
         },
         {
             "name": "Rehabitation Services",
-            "url": "/services/kitchen-remodeling-leelanau-county",
+            "url": "/contact",
             "description": "We provide home rehabitation services in Leelanau County, Michigan. This includes kitchen and bathroom remodels as well as updates and enhancements to other occupied and unoccupied living spaces.",
-            "icon": "icon-fridge"
+            "icon": "icon-sofa"
         }
     ]
 }

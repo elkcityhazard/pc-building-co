@@ -1,6 +1,6 @@
 ---
-title: PC Building Company - Kitchen Remodels in Leelanau County, MI
-description: "PC Building Company is a builder that specializes in kitchen remodels in Leelanau County, Michigan"
+title: P.C. Building Company - Kitchen Remodels in Leelanau County, MI
+description: "P.C. Building Company is a builder that specializes in kitchen remodels in Leelanau County, Michigan"
 url: "/services/kitchen-remodeling-leelanau-county"
 metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
@@ -11,7 +11,7 @@ bgImage: "/static/images/kitchen_remodel_1920_600.jpg"
 ---
 ## Revitalize Your Kitchen with Custom Upgrades
 
-At PC Building Company, we specialize in crafting exquisite, functional kitchen spaces for discerning homeowners in Leelanau County. Our expert team combines innovative design, superior craftsmanship, and local expertise to deliver custom kitchens that maximize efficiency and enhance your culinary experience.
+At P.C. Building Company, we specialize in crafting exquisite, functional kitchen spaces for discerning homeowners in Leelanau County. Our expert team combines innovative design, superior craftsmanship, and local expertise to deliver custom kitchens that maximize efficiency and enhance your culinary experience.
 
 ### Our Kitchen Remodel Services:
 
@@ -47,7 +47,7 @@ At PC Building Company, we specialize in crafting exquisite, functional kitchen 
    - Built-in wine racks, coffee stations, and pantry systems
    - Customized shelving for cookbooks and decorative displays
 
-## Why Choose PC Building Company as Your Kitchen Remodeler in Leelanau County?
+## Why Choose P.C. Building Company as Your Kitchen Remodeler in Leelanau County?
 
 - 20+ years of experience in luxury home improvements
 - Dedicated project management to ensure a streamlined process
@@ -66,7 +66,7 @@ At PC Building Company, we specialize in crafting exquisite, functional kitchen 
 
 ## Ready to Start Your Kitchen Remodel?
 
-Contact PC Building Company today for a complimentary consultation. Let us bring your dream kitchen to life in Leelanau County. Whether you're planning a complete kitchen overhaul or a custom cabinetry solution, our team is ready to deliver exceptional results.
+Contact P.C. Building Company today for a complimentary consultation. Let us bring your dream kitchen to life in Leelanau County. Whether you're planning a complete kitchen overhaul or a custom cabinetry solution, our team is ready to deliver exceptional results.
 
-*PC Building Company - Elevating Kitchen Remodels in Leelanau County to New Heights of Efficiency and Luxury*
+*P.C. Building Company - Elevating Kitchen Remodels in Leelanau County to New Heights of Efficiency and Luxury*
 

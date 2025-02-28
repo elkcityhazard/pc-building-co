@@ -1,0 +1,22 @@
+{{define "base-contact"}}
+<!DOCTYPE html>
+<html lang="en">
+{{template "head" .}}
+<body>
+    <div class="wrapper">
+    {{template "mobile-nav" .}}
+    {{template "main-nav" . }}
+        {{ template "home-header" .}}
+            {{template "contact-form" . }}
+        <main id="content">
+            {{template "content" . }}
+            {{template "home-services" .}}
+            {{ template "section-lightbox" .}}
+            {{template "service-area" .}}
+        </main>
+        {{template "footer" .}}
+        {{template "back-to-top" .}}
+    </div>   
+</body>
+</html>
+{{end}}

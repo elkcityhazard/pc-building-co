@@ -71,7 +71,7 @@ a {
         flex-flow: row nowrap;
     }
     justify-content: center;
-    gap: var(--spacing-default);
+    gap: var(--spacing-sm);
     .btn {
         flex: 1 0 50%;
         text-align: center;

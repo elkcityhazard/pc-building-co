@@ -1,0 +1,27 @@
+{{define "subject" }}
+{{ with .Subject }}
+{{.}}
+{{ end }}
+{{ end }}
+
+{{ define "textBody" }}
+Name: {{.Email}}
+Message: {{.Message}}
+{{ end }}
+
+{{define "htmlBody" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <p>Hi P.C. Building Company,</p> 
+  <p>You received a new message from your website:</p>
+  <p><b>Email:</b> {{.Email}}</p>
+  <p><b>Message:</b> {{.Message}}</p>
+</body>
+
+</html>
+{{ end }}

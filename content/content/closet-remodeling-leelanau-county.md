@@ -1,6 +1,6 @@
 ---
-title: PC Building Company - Closet Remodels in Leelanau County, MI
-description: "PC Building Company is a builder that specializes in closet remodels in Leelanau County, Michigan"
+title: P.C. Building Company - Closet Remodels in Leelanau County, MI
+description: "P.C. Building Company is a builder that specializes in closet remodels in Leelanau County, Michigan"
 url: "/services/closet-remodeling-leelanau-county"
 metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
@@ -12,7 +12,7 @@ bgImage: "/static/images/closet_remodel_1920_600.jpg"
 
 ## Transform Your Storage Space with Custom Closets
 
-At PC Building Company, we specialize in creating stunning, functional closet spaces for discerning homeowners in Leelanau County. Our expert team combines innovative design, superior craftsmanship, and local expertise to deliver custom closets that maximize space and enhance your lifestyle.
+At P.C. Building Company, we specialize in creating stunning, functional closet spaces for discerning homeowners in Leelanau County. Our expert team combines innovative design, superior craftsmanship, and local expertise to deliver custom closets that maximize space and enhance your lifestyle.
 
 ### Our Closet Remodel Services:
 
@@ -48,7 +48,7 @@ At PC Building Company, we specialize in creating stunning, functional closet sp
    - Custom shoe racks and display shelves
    - Jewelry safes and watch winders
 
-## Why Choose PC Building Company as Your Walk-In Closet Builder in Leelanau County?
+## Why Choose P.C. Building Company as Your Walk-In Closet Builder in Leelanau County?
 
 - 20+ years of experience in luxury home improvements
 - Dedicated project management for seamless execution
@@ -69,7 +69,7 @@ At PC Building Company, we specialize in creating stunning, functional closet sp
 
 ## Ready to Start Your Closet Remodel?
 
-Contact PC Building Company today for a complimentary consultation. Let us bring your dream closet to life in Leelanau County. Whether you're looking for a complete walk-in closet overhaul or a custom storage solution, our team is ready to deliver exceptional results.
+Contact P.C. Building Company today for a complimentary consultation. Let us bring your dream closet to life in Leelanau County. Whether you're looking for a complete walk-in closet overhaul or a custom storage solution, our team is ready to deliver exceptional results.
 
-*PC Building Company - Elevating Closet Remodels in Leelanau County to New Heights of Organization and Luxury*
+*P.C. Building Company - Elevating Closet Remodels in Leelanau County to New Heights of Organization and Luxury*
 

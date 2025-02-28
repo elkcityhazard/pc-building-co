@@ -1,35 +1,72 @@
 ---
-title: Leelanau County, MI Home Remodel Services
-description: This is a description
+title: Leelanau County Home Builder Services
+description: P.C. Building Company is a home building company located in Lake Leelanua, MI serving Leelanau County
 url: "/services"
 metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
 author: "Andrew M McCall"
 publishDate: 2025-02-02
 updateDate: 2025-02-02
-bgImage: "/static/images/a-home-with-a-grassy-lawn.webp"
+bgImage: "/static/images/closet_remodel_1920_1280.jpg"
 content:
-   - id: 0
-     name: Bathroom Remodels
-     url: /services/bathroom-remodeling-leelanau-county
-     text: Are you tired of your outdated bathroom that feels more like a relic than a retreat? Transform your daily routine into a luxurious experience with our premier bathroom remodel service in Leelanau County, MI. Imagine stepping into a space designed specifically for your comfort and style, where modern fixtures meet elegant aesthetics. 
-     image: /static/images/bathroom_remodel_350_233.jpg
-   - id: 1
-     name: Bedroom Remodels
-     url: /services/bedroom-remodeling-leelanau-county
-     text: Our specialized bedroom remodles in Leelanau County, Michigan can help you transform your bedroom to match your unique personality and style.  Our bedroom remodel services can help transform your existing space into a sanctuary retreat.  Let us help tell your story with custom designs taht bring your bedroom to life.
-     image: /static/images/bedroom_remodel_350_233.jpg
-   - id: 2
-     name: Closet Remodels
-     url: /services/closet-remodeling-leelanau-county
-     text: Are you struggling to find space in your cluttered closet?  We specialize in creating stunning storage spaces where every item has a dedicated space.  Our closet remodel services for Leelanau County, Michigan can breathe new life into your storage space and help you find calm and peace again in your closet.
-     image: /static/images/closet_remodel_350_233.jpg
-   - id: 3
-     name: Kitchen Remodels
-     url: /services/kitchen-remodeling-leelanau-county
-     text: Our Leelanau County, Michigan kitchen remodel services are perfect for passionate chefs who want their kitchen to inspire them.  The culinary experience is essential to the Leelanau County, Michigan experience.  More than just a space to cook meals, our kitchens craft memories and bring family gatherings to life.
-     image: /static/images/kitchen_remodel_350_233.jpg
+  - id: 0
+    name: Home Remodels
+    url: /contact
+    text: We specialize in home refurbishment, home rehabitation, and home revitalization in Leelanau County, Michigan. 
+    services:
+      - Home Remodeling
+      - Home Refurbishment
+      - Home Rehabitation
+      - New Homes & Remodels
+    image: "/static/images/cropped-builder-nail-roof/cropped-builder-nail-roof-960-540.jpg"
+  - id: 1
+    name: Bathroom Remodels
+    url: /contact
+    text: Refresh your bathroom with modern fixtures, high-quality cabinetry, and luxury fittings.
+    services:
+      - High End Fixtures & Fittings
+      - Tiling & Stonework
+      - Complete Bathroom Renovation
+      - Accessibility Upgrades
+      - Eco-Friendly Solutions
+      - Spa-like features
+    image: /static/images/bathroom_remodel_350_233.jpg
+  - id: 2
+    name: Bedroom Remodels
+    url: /contact
+    text: From lighting, fixtures, to painting, trims, and more we offer comprehensive bedroom remodel services to transfrom your bedroom based on your preferred design.
+    services:
+      - Custom Built-Ins & Storage Solutions
+      - Luxury Flooring Options
+      - Lighting Fixture Installation
+      - Ceiling Treatments
+      - Walk In Closets
+      - Bathroom Additions
+    image: /static/images/bedroom_remodel_350_233.jpg
+  - id: 3
+    name: Closet Remodels
+    url: /contact
+    text: Maximize your storage with our closet remodeling services. We custom build closets based on a provided design or install pre-fabricated systems.
+    services:
+      - Personalized Closet Spaces
+      - Custom Storage Solutions
+      - Walk-in Closet Construction
+      - High-End Finishes
+      - Closet Lighting Installation
+      - Speciality Storage
+    image: /static/images/closet_remodel_350_233.jpg
+  - id: 4
+    name: Kitchen Remodels
+    url: /contact
+    text: Reimagine your kitchen to match your culinary aspirations. From cabinetry to countertops, we offer a comprehensive overhaul tailored to your needs.
+    services:
+      - Personalized Kitchens
+      - Custom Cabinetry Solutions
+      - Countertop Installation
+      - High-End Finishes
+      - Lighting Installation
+      - Island & Seating Areas
+      - Specialty Features
+    image: /static/images/kitchen_remodel_350_233.jpg
 ---
-
-# Services 
 

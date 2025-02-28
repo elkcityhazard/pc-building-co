@@ -26,11 +26,18 @@
                             </header>
                             <services-listings-content>
                                 {{.Text}}
+                                {{ with .Services }}
+                                    <ul>
+                                    {{ range . }}
+                                        <li>{{.}}</li>
+                                    {{ end }}
+                                    </ul>
+                                {{ end }}
                             </services-listings-content>
-                            <a href="{{.URL}}" title="link to: {{.Name}}" aria-label="link to: {{.Name}}" class="btn primary">{{.Name}}</a>
+                            <a href="{{.URL}}" title="link to: {{.Name}}" aria-label="link to: {{.Name}}" class="btn primary">Contact Us Now</a>
                         </div>
                         <div class="col">
-                            <img src="{{.Image}}" alt="{{.Name}}" decoding="async" loading="lazy" height="auto" width="400">
+                            <img src="{{.Image}}" alt="{{.Name}}" decoding="async" loading="lazy" height="auto" width="450">
                         </div>
                     </div>
                 </service-listings-card>

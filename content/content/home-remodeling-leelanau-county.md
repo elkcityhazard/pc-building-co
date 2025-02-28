@@ -1,6 +1,6 @@
 ---
 title: Home Remodeling In Leelanau County, Michigan
-description: "PC Building Company is a builder that specializes in home remodels in Leelanau County, Michigan"
+description: "P.C. Building Company is a builder that specializes in home remodels in Leelanau County, Michigan"
 url: "/services/home-remodeling-leelanau-county"
 metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"
