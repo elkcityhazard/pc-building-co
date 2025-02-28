@@ -6,14 +6,15 @@
 
 .home-header {
     background: var(--sunset);
-    height: 80vh;
     @media screen and (min-width: calc(767 / 16 * 1rem)) {
+    display: grid;
+    place-items: center;
+    min-height: 66vh;
         background: #fff no-repeat center / cover;
         &.has-img {
             background-image: url("/static/images/a-home-with-a-grassy-lawn.webp");
         }
     }
-    height: 66vh;
     &__inner {
         height: inherit;
         .row {
