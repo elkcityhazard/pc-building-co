@@ -1,11 +1,4 @@
-
-@font-face {
-    src: 
-    local("Great Vibes"),
-    url("/static/fonts/great-vibes/GreatVibes-Regular.otf") format('opentype');
-    font-family: 'Great Vibes';
-    font-display: optional;
-}
+@import url(https://fonts.bunny.net/css?family=great-vibes:400);
 :root {
     --spacing-none: 0rem;
     --spacing-xs: 0.25rem;

@@ -60,7 +60,7 @@ P.C. Building Company serves homeowners in Leelanau County. Our deep commitment 
 
 ### Get In Touch:
 
-We are eager to hear from you! For any inquiries call, text, or email us at __blah blah blah__. We look forward to working  with you to create the perfect solution tailored to your home and lifestyle needs.
+We are eager to hear from you! For any inquiries call  at __[(231) 357-6340](tel:+12313576340 "Call P.C. Building Company")__. We look forward to working  with you to create the perfect solution tailored to your home and lifestyle needs.
 
 Thank you for considering P.C. Building Company as your remodeling partner in Leelanau County, MI. We are excited to contribute to your home’s transformation journey!
 
