@@ -27,7 +27,6 @@ import (
 var app *config.AppConfig = config.NewAppConfig()
 
 func main() {
-
 	app.Renderer = amrenderengine.NewTemplateCollection(templates.GetTemplatesFS(), "./internal/templates")
 	app.Renderer.CreateTemplateCache()
 	app.Renderer.UseCache = app.IsProduction
