@@ -36,7 +36,7 @@
                     padding: var(--spacing-md);
                     h1 {
                         color: var(--drab-dark-brown);
-                        font-family: 'Great Vibes', handwriting;
+                        font-family: 'Great Vibes', sans-serif;
                         font-display: swap;
                     }
                     p {
