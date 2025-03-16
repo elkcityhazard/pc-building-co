@@ -149,6 +149,7 @@ a {
 
 .logo {
     font-family: 'Great Vibes', handwriting;
+    font-display: swap;
     text-decoration: none;
     color: var(--sunset);
     font-size:clamp(1.25rem, 0.7708rem + 2.5641vw, 2rem);
