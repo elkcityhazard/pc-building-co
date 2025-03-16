@@ -36,5 +36,9 @@
     <link rel="preload" href="/static/images/a-home-with-a-grassy-lawn.webp" as="image">
     <script></script>
     <script type="module" src="/static/dist/index.js" defer></script>
+
+    {{if .IsProduction }}
+        <script defer src="https://stats.protoweb.io/script.js" data-website-id="3c1db2ec-9965-4637-b58b-585d0b1a64af"></script>
+    {{ end }}
 </head>
 {{ end}}

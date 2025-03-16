@@ -29,8 +29,6 @@ var app *config.AppConfig = config.NewAppConfig()
 func main() {
 	app.Renderer = amrenderengine.NewTemplateCollection(templates.GetTemplatesFS(), "./internal/templates")
 	app.Renderer.CreateTemplateCache()
-	app.Renderer.UseCache = app.IsProduction
-	app.Renderer.SetIsProduction(app.IsProduction)
 	app.Renderer.SetDirPaths("templates/pages", "templates/layouts", "templates/partials", "gohtml")
 	app.Renderer.TemplateFuncs = template.FuncMap{
 		"humanPhone": func(ph string) string {
@@ -64,6 +62,8 @@ func main() {
 
 	parseFlags(app)
 
+	app.Renderer.UseCache = app.IsProduction
+	app.Renderer.SetIsProduction(app.IsProduction)
 	app.Renderer.SetStringMapEntry("SiteTitle", app.WebsiteName)
 	if app.IsProduction {
 		app.Renderer.SetStringMapEntry("BaseURL", app.WebsiteAddress)
