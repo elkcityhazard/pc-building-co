@@ -1,6 +1,6 @@
 ---
 title: Leelanau County Home Builder Services
-description: P.C. Building Company is a home building company located in Lake Leelanau, MI serving Leelanau County
+description: "P.C. Building Company is a home building company located in Lake Leelanau, Michigan"
 url: "/services"
 metaImage: "/static/images/a-home-with-a-grassy-lawn.webp"
 metaImageAlt: "A home with a grassy lawn in Leelanau, Michigan"

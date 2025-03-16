@@ -25,6 +25,9 @@ func routes() http.Handler {
 	mux.Handle("/static/*", http.StripPrefix("/static/", fileServer))
 
 	mux.HandleFunc("/", handlers.Repo.GetHomeHandler)
+	mux.HandleFunc("/favicon.ico", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "./static/images/favicon/favicon.ico")
+	}))
 	mux.HandleFunc("/about", handlers.Repo.GetAboutHandler)
 	mux.HandleFunc("/contact", handlers.Repo.GetContactHandler)
 	mux.HandleFunc("/services", handlers.Repo.HandleGetServices)
