@@ -57,6 +57,7 @@ func routes() http.Handler {
 		app.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
 		app.Renderer.SetStringMapEntry("ContactLink", "/contact")
 		app.Renderer.SetStringMapEntry("PhoneNumber", "+12313576340")
+		w.WriteHeader(http.StatusNotFound)
 
 		err := app.Renderer.RenderTemplate(w, r, "404.gohtml")
 
