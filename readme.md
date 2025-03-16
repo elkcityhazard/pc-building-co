@@ -34,6 +34,7 @@ run:
 
 ```
 FROM  golang:1.24.1-alpine
+RUN apk add --no-cache nodejs npm
 ENV BIN_NAME ${BIN_NAME}
 
 COPY entrypoint.sh /entrypoint.sh
@@ -42,11 +43,14 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN mkdir -p bin/
+RUN mkdir -p bin/ node_modules/
 
 EXPOSE 8080
 
-RUN go build \
+RUN npm install \
+&& npm run css:build \
+&& npm run webpack:build \
+&& go build \
 -o ${BIN_NAME} \
 cmd/web/*.go
 
