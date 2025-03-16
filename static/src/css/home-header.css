@@ -37,6 +37,7 @@
                     h1 {
                         color: var(--drab-dark-brown);
                         font-family: 'Great Vibes', sans-serif;
+                        text-transform: capitalize;
                     }
                     p {
                         color: var(--drab-dark-brown);

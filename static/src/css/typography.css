@@ -160,6 +160,7 @@ a {
     color: var(--sunset);
     font-size:clamp(1.25rem, 0.7708rem + 2.5641vw, 2rem);
     font-weight: bold;
+    text-transform: capitalize;
     transition: all 350ms;
     &:hover,
     &:active {
