@@ -5,7 +5,7 @@
   "scripts": {
     "webpack:watch": "NODE_ENV=development webpack -w",
     "webpack:build": "NODE_ENV=production webpack build",
-    "css:watch": "postcss static/src/css/index.css -o static/dist/css/index.css -w",
+    "css:watch": "postcss ./static/src/css/index.css -o ./static/dist/css/index.css -w",
     "css:build": "NODE_ENV=production postcss static/src/css/index.css -o static/dist/css/index.css"
   },
   "keywords": [],
