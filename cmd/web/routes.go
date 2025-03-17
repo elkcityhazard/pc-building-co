@@ -25,13 +25,8 @@ func routes() http.Handler {
 	mux.Handle("/static/*", http.StripPrefix("/static/", fileServer))
 
 	mux.HandleFunc("/", handlers.Repo.GetHomeHandler)
-	mux.HandleFunc("/favicon.ico", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "./static/images/favicon/favicon.ico")
-	}))
-	mux.HandleFunc("/about", handlers.Repo.GetAboutHandler)
 	mux.HandleFunc("/contact", handlers.Repo.GetContactHandler)
 	mux.HandleFunc("/services", handlers.Repo.HandleGetServices)
-	// mux.HandleFunc("/services/{service}", handlers.Repo.HandleGetService)
 	mux.Post("/contact", handlers.Repo.PostContactHandler)
 
 	mux.Handle("/robots.txt", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -52,6 +47,9 @@ func routes() http.Handler {
 		}
 
 		http.ServeFile(w, r, filepath.Join(cwd, "ads.txt"))
+	}))
+	mux.HandleFunc("/favicon.ico", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "./static/images/favicon/favicon.ico")
 	}))
 	mux.NotFound(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		app.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
