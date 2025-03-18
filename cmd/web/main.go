@@ -52,6 +52,16 @@ func main() {
 		"concatBaseURL": func(s string) string {
 			return app.WebsiteAddress + s
 		},
+		"getFileModTime": func(s string) int {
+			info, err := os.Stat(fmt.Sprintf("./%s", s))
+
+			if err != nil {
+				return 0
+			}
+
+			return int(info.ModTime().Unix())
+
+		},
 	}
 
 	_, err := app.Renderer.CreateTemplateCache()

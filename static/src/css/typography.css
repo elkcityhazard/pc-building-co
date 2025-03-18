@@ -25,7 +25,13 @@ h6 {
   font-weight: normal;
   margin-block: 0.5rem;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
   word-break: break-word;
+  @media screen and (min-width: calc(350 / 16 * 1rem)) {
+    overflow-wrap: normal;
+    white-space: pre-wrap;
+    word-break: normal;
+  }
 }
 
 h1 {

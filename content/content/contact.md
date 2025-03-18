@@ -11,7 +11,7 @@ bgImage: "/static/images/kitchen_remodel_1920_1280.jpg"
 ---
 ## Contact Us
 
-We are a professional building company in Leelanau County, MI  dedicated to turning your home improvement dreams into reality with meticulous attention to detail and superior craftsmanship. Whether you are looking to refresh a single room or undertake an extensive remodel of your luxury home, no one does it better for less.  
+We are a professional building company in Leelanau county, MI  dedicated to turning your home improvement dreams into reality with meticulous attention to detail and superior craftsmanship. Whether you are looking to refresh a single room or undertake an extensive remodel of your luxury home, no one does it better for less.  
 
 ## Our Mission
 
@@ -20,7 +20,7 @@ At P.C. Building Company, our mission is to provide unparalleled remodeling serv
 
 ## Our Commitment to the Community
 
-P.C. Building Company is deeply committed to the communities in which we work. Serving Leelanau County, we take pride in understanding local styles and preferences. We are passionate about delivering remodel projects that not only meet but exceed the expectations of homeowners in this  area.
+P.C. Building Company is deeply committed to the communities in which we work. Serving Leelanau county, we take pride in understanding local styles and preferences. We are passionate about delivering remodel projects that not only meet but exceed the expectations of homeowners in this  area.
 
 
 ## Why Choose Us?
@@ -34,13 +34,13 @@ Choosing P.C. Building Company means partnering with a company that values quali
 
 ### Contact Information:
 
-__Phone__: [(231) 357-6340](tel:+12313576340 "get a home builder in Leelanau County, Michigan")
+__Phone__: [(231) 357-6340](tel:+12313576340 "get a home builder in Leelanau county, Michigan")
 
 We welcome you to reach out to us for more information on our services or to schedule a consultation.
 
 ### Our Services:
 
-At P.C. Building Company, we offer a comprehensive range of home building and remodeling  services tailored to suit the unique needs of homeowners in Leelanau County. Explore our offerings:
+At P.C. Building Company, we offer a comprehensive range of home building and remodeling  services tailored to suit the unique needs of homeowners in Leelanau county. Explore our offerings:
 
 - __Home Remodels__: Transform your home with our complete remodel services. From minor updates to major renovations, we ensure your home reflects your style and meets your family’s functional needs.
 
@@ -56,11 +56,11 @@ At P.C. Building Company, we offer a comprehensive range of home building and re
 
 ### Service Areas:
 
-P.C. Building Company serves homeowners in Leelanau County. Our deep commitment to these vibrant communities ensures we deliver exceptional remodel projects that meet local styles and preferences.
+P.C. Building Company serves homeowners in Leelanau county and surrounding areas. Our deep commitment to these vibrant communities ensures we deliver exceptional remodel projects that meet local styles and preferences.
 
 ### Get In Touch:
 
 We are eager to hear from you! For any inquiries call  at __[(231) 357-6340](tel:+12313576340 "Call P.C. Building Company")__. We look forward to working  with you to create the perfect solution tailored to your home and lifestyle needs.
 
-Thank you for considering P.C. Building Company as your remodeling partner in Leelanau County, MI. We are excited to contribute to your home’s transformation journey!
+Thank you for considering P.C. Building Company as your remodeling partner in Leelanau county, MI. We are excited to contribute to your home’s transformation journey!
 

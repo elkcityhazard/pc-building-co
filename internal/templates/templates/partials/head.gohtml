@@ -31,11 +31,10 @@
     
      <!--/twiiter-->
     <title>{{ with .Data.FrontMatter.Title }}{{.}}{{end}}{{with index .StringMap "SiteTitle"}} - {{.}}{{end}}</title>
-    <link rel="stylesheet" href="/static/dist/css/index.css">
+    <link rel="stylesheet" href="/static/dist/css/index.css?version={{"/static/dist/css/index.css" | getFileModTime}}">
     <link rel="preload" href="/static/images/a-home-with-a-grassy-lawn.webp" as="image">
     <script></script>
-    <script type="module" src="/static/dist/index.js" defer></script>
-
+    <script type="module" src="/static/dist/index.js?version={{"/static/dist/index.js" | getFileModTime}}" defer></script>
     {{if .IsProduction }}
         <script defer src="https://stats.protoweb.io/script.js" data-website-id="3c1db2ec-9965-4637-b58b-585d0b1a64af"></script>
     {{ end }}

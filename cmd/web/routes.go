@@ -52,7 +52,8 @@ func routes() http.Handler {
 		http.ServeFile(w, r, "./static/images/favicon/favicon.ico")
 	}))
 	mux.NotFound(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		app.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Home Builder In Traverse City, Leelanau County, and Grand Traverse County"))
+		app.Renderer.SetStringMapEntry("PageTitle", html.EscapeString("Sorry, we could not find the requested resource."))
+		app.Renderer.SetStringMapEntry("PageSubtitle", html.EscapeString("Try going back to the home page and starting over."))
 		app.Renderer.SetStringMapEntry("ContactLink", "/contact")
 		app.Renderer.SetStringMapEntry("PhoneNumber", "+12313576340")
 		w.WriteHeader(http.StatusNotFound)
