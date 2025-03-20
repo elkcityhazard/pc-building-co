@@ -24,29 +24,22 @@ h6 {
     Sylfaen, serif;
   font-weight: normal;
   margin-block: 0.5rem;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-  word-break: break-word;
-  @media screen and (min-width: calc(350 / 16 * 1rem)) {
-    overflow-wrap: normal;
-    white-space: pre-wrap;
-    word-break: normal;
-  }
 }
 
 h1 {
   /* font-family: 'Phudu', display; */
-  font-size: clamp(2rem, 0.8651rem + 5.1867vw, 4rem);
+  font-size: clamp(1.5rem, 0.2906rem + 7.7375vw, 4rem);
   font-weight: normal;
   line-height: 1.25;
+  overflow-wrap: word-break;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 1.059rem + 3.6971vw, 3rem);
+  font-size: clamp(1.35rem, 0.5359rem + 5.2083vw, 3rem);
 }
 
 h3 {
-  font-size: clamp(1.4rem, 1.2339rem + 0.8889vw, 1.66rem);
+  font-size: clamp(1.25rem, 1.0477rem + 1.2942vw, 1.66rem);
 }
 
 article,
@@ -57,7 +50,6 @@ span,
 a {
   font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
   font-weight: normal;
-  overflow-wrap: break-word;
 }
 
 a {
