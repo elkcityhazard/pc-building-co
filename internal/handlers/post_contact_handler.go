@@ -113,14 +113,13 @@ func (hr *HandlerRepo) PostContactHandler(w http.ResponseWriter, r *http.Request
 
 	}
 
-	//for _, v := range spamList {
-	//	if strings.Contains(strings.ToLower(msg), strings.ToLower(v)) {
-	//		fmt.Println(v, msg)
-	//		formErrs["message"] = append(formErrs["message"], "invalid request")
-	//		hr.Cfg.Renderer.SetDataMapEntry("FormErrors", formErrs)
-	//		hr.Cfg.Renderer.SetDataMapEntry("Form", vals)
-	//	}
-	//}
+	for _, v := range spamList {
+		if strings.Contains(strings.ToLower(msg), strings.ToLower(v)) {
+			formErrs["message"] = append(formErrs["message"], "invalid request")
+			hr.Cfg.Renderer.SetDataMapEntry("FormErrors", formErrs)
+			hr.Cfg.Renderer.SetDataMapEntry("Form", vals)
+		}
+	}
 
 	if len(formErrs["email"]) > 0 || len(formErrs["message"]) > 0 {
 		err = hr.Cfg.Renderer.RenderTemplate(w, r, "contact.gohtml")

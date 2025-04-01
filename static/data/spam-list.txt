@@ -225,14 +225,11 @@ Guaranteed deposit
 Guaranteed income
 Guaranteed payment
 Have you been turned down?
-Hello
-Here
 Hidden
 Hidden assets
 Hidden charges
 Hidden fees
 High score
-Home
 Home based
 Home employment
 Home based business
@@ -556,3 +553,14 @@ Your status
 Zero chance
 Zero percent
 Zero risk
+Youtube
+Youtube growth service
+subscribers
+guarantee to
+subscribers per month
+online reviews
+google reviews
+comments
+interaction
+increasing likes
+channel/videos
