@@ -5,79 +5,80 @@
 } */
 
 .contact-form {
-    background: var(--sunset);
-    .container {
-        margin-block: 0;
-        .row {
-            display: grid;
-            grid-template-columns: 1fr;
-            place-items: center;
-            .col {
-                width: 100%;
-                max-width: calc(768 / 16 * 1rem);
-            }
-        }
+  background: var(--sunset);
+  .container {
+    margin-block: 0;
+    .row {
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+      .col {
+        width: 100%;
+        max-width: calc(768 / 16 * 1rem);
+      }
+    }
+  }
+
+  .form-control {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    margin-block-end: var(--spacing-sm);
+    label,
+    input,
+    textarea {
+      border: none;
+      border-radius: var(--spacing-default);
+      box-shadow: 0 0 20px -15px #000;
+      font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+      line-height: 1.5;
+      max-width: 100%;
+      min-height: calc(32 / 16 * 1rem);
+      padding-block: var(--spacing-xs);
+      padding-inline: var(--spacing-sm);
+      outline: 1px solid var(--drab-dark-brown);
+      width: 100%;
+      display: inline-block;
+      &:focus,
+      &:active {
+        outline: 2px solid var(--drab-dark-brown);
+      }
+    }
+    label {
+      outline: none;
     }
 
-    .form-control {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
-        margin-block-end: var(--spacing-sm);
-        label,
-        input,
-        textarea {
-            border: none;
-            border-radius: var(--spacing-default);
-            box-shadow: 0 0 20px -15px #000;
-            font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
-            line-height: 1.5;
-            min-height: calc(32 / 16 * 1rem);
-            padding-block: var(--spacing-xs);
-            padding-inline: var(--spacing-sm);
-            outline: 1px solid var(--drab-dark-brown);
-            width: 100%;
-            display: inline-block;
-            &:focus,
-            &:active {
-                outline: 2px solid var(--drab-dark-brown);
-            }
-        }
-        label {
-            outline: none;
-        }
-    
-        input:not(input[type="submit"]),
-        textarea {
-            background: var(--drab-dark-brown);
-            color: var(--sunset);
-            width: auto;
-            transition: all 250ms;
-            &:focus,
-            &:active {
-                background: var(--white);
-                color: var(--black);
-            }
-        }
-        input[type="submit"] {
-            transition: all 350ms;
-            background: var(--drab-dark-brown);
-            color: var(--sunset);
-            outline: 1px solid var(--french-gray);
-            grid-column: 0/2;
-            padding-block: var(--spacing-sm);
-            padding-inline: var(--spacing-sm);
-            text-transform: uppercase;
-            cursor: pointer;
-            font-weight: 600;
-            &:hover,
-            &:active,
-            &:focus {
-                background: var(--golden-brown);
-                color: var(--white);
-                outline: 1px solid var(--drab-dark-brown);
-            }
-        }
+    input:not(input[type="submit"]),
+    textarea {
+      background: var(--drab-dark-brown);
+      display: inline-block;
+      color: var(--sunset);
+      transition: all 250ms;
+      &:focus,
+      &:active {
+        background: var(--white);
+        color: var(--black);
+      }
     }
+    input[type="submit"] {
+      transition: all 350ms;
+      background: var(--drab-dark-brown);
+      color: var(--sunset);
+      outline: 1px solid var(--french-gray);
+      grid-column: 0/2;
+      padding-block: var(--spacing-sm);
+      padding-inline: var(--spacing-sm);
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 600;
+      &:hover,
+      &:active,
+      &:focus {
+        background: var(--golden-brown);
+        color: var(--white);
+        outline: 1px solid var(--drab-dark-brown);
+      }
+    }
+  }
 }
