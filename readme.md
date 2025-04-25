@@ -107,3 +107,7 @@ exec ${BIN_NAME} \
 docker buildx build --platform linux/arm64,linux/amd64 -t
 dockerhubname/dockerhubproject:latest --push .
 ```
+
+## Run
+`docker container run -d --name pcbuildingco --restart always -p 8080:8080
+megalawnalien/pc-building-co:latest``
