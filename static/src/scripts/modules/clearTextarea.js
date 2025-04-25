@@ -1,7 +1,7 @@
 function formatTextarea(textareaID = "") {
   this.textareaID = textareaID;
   this.textarea = document.getElementById(this.textareaID) || null;
-  this.initialValue = this.textarea.value;
+  this.initialValue = this.textarea?.value;
   this.currentValue = "";
   if (!this.textarea) return null;
 

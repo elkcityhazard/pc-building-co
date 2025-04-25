@@ -100,3 +100,10 @@ exec ${BIN_NAME} \
 
 
 ```
+
+## Build
+
+```
+docker buildx build --platform linux/arm64,linux/amd64 -t
+dockerhubname/dockerhubproject:latest --push .
+```
