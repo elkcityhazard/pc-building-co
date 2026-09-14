@@ -13,26 +13,32 @@
     height: 40px;
     width: 40px;
     transition: all 350ms;
+
     &.top {
+        z-index: 99;
+
         .icon {
+
             &.arrow-up {
                 height: 32px;
                 width: 32px;
-                    stroke: var(--golden-brown);
+                stroke: var(--golden-brown);
+
                 path {
                     transition: all 350ms;
-                   stroke: var(--sunset);
+                    stroke: var(--sunset);
                 }
             }
         }
     }
+
     &:hover,
     &:active {
         &.top {
             .icon {
                 &.arrow-up {
-                path {
-                    stroke: var(--golden-brown);
+                    path {
+                        stroke: var(--golden-brown);
                     }
                 }
             }

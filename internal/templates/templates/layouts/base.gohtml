@@ -9,9 +9,10 @@
         {{ template "home-header" .}}
         <main id="content">
             {{template "content" . }}
+             {{ template "video" . }}
             {{template "home-services" .}}
             {{ template "section-lightbox" .}}
-            {{template "service-area" .}}
+            
         </main>
         {{template "footer" .}}
         {{template "back-to-top" .}}

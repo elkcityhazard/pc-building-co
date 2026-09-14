@@ -33,6 +33,8 @@
         object-fit: cover;
         z-index: -1;
         transition: all 350ms;
+        height: 100%;
+        width: 100%;
     }
     &:hover {
         > img {
@@ -94,4 +96,13 @@
         grid-template-columns: repeat(auto-fit, minmax(calc(25% - 1rem), 1fr));
         
     }
+}
+
+
+.pswp__bg {
+  background: rgba(0, 0, 0, 0.9) !important; 
+}
+
+.pswp__img--placeholder {
+  background: transparent !important; 
 }

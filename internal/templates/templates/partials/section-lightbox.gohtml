@@ -1,6 +1,5 @@
-{{define "section-lightbox"}}
+{{define "section-lightbox" }}
 <section class="gallery" id="gallery">
-<img src="/static/images/snowy-pine-trees.jpg" alt="snowy pine trees"  decoding="async" loading="lazy" width="1920" height="auto">
 <div class="container">
     <div class="row">
         <div class="col">
@@ -12,39 +11,28 @@
         </div>
     </div>
     <div class="row">
+        {{ $thumbnails := "static/images/2026/09/output/*_360x360.webp" | getImages }}
+        {{ $fullsize := "static/images/2026/09/output/*_1920x1080.webp" | getImages }}
         <div class="pswp-gallery pswp-gallery--single-column" id="galleryWork">
-            <a href="/static/images/bathroom_remodel.jpg" 
-              data-pswp-width="1920" 
-              data-pswp-height="1250" 
-              title="bathroom remodel in leelanau county, michigan"
-              aria-label="bathroom remodel in leelanau county, michigan"
+            {{ with $thumbnails }}
+                {{ range $i, $v := . }}
+                    {{ $large := index $fullsize $i }}
+                    <a href="{{ $large.Name }}" 
+              data-pswp-width="{{$large.Width}}" 
+              data-pswp-height="{{ $large.Height}}" 
+              title="{{ $large.Alt }}"
+              aria-label="{{ $large.Alt }}"
               target="_blank">
-              <img data-src="/static/images/bathroom_remodel_350_233.jpg" alt="a bathroom remodel in leelanau county michigan" height="233" width="350" loading="lazy" decoding="async" />
+              <img 
+                data-src="{{$v.Name}}" 
+                alt="{{$v.Alt}}" 
+                height="{{$v.Height}}" 
+                width="{{$v.Width}}" 
+                loading="lazy" 
+                decoding="async" />
             </a>
-            <a href="/static/images/kitchen_remodel_1920_1280.jpg" 
-              data-pswp-width="1920" 
-              data-pswp-height="1200"
-              title="kitchen remodel in leelanau county, michigan"
-              aria-label="kitchen remodel in leelanau county, michigan" 
-              target="_blank">
-              <img data-src="/static/images/kitchen_remodel_350_233.jpg" alt="a kitchen remodel in leelanau county michigan" height="233" width="350" loading="lazy" decoding="async" />
-            </a>
-            <a href="/static/images/bedroom_remodel_1920_1280.jpg" 
-              data-pswp-width="1920" 
-              data-pswp-height="1250" 
-              title="bedroom remodel in leelanau county, michigan"
-              aria-label="bedroom remodel in leelanau county, michigan"
-              target="_blank">
-              <img data-src="/static/images/bedroom_remodel_350_233.jpg" alt="a bedroom remodel in leelanau county michigan" height="233" width="350" loading="lazy" decoding="async" />
-            </a>
-            <a href="/static/images/stairs_remodel_1920_1280.jpg" 
-            data-pswp-width="1920" 
-            data-pswp-height="1250"
-            title="stair remodel in leelanau county, michigan"
-              aria-label="stair remodel in leelanau county, michigan" 
-            target="_blank">
-            <img data-src="/static/images/stairs_remodel_350_233.jpg" alt="a bedroom remodel in leelanau county michigan" height="233" width="350" loading="lazy" decoding="async" />
-          </a>
+                {{ end }}
+            {{ end }}
     </div>
           </div>
             
@@ -52,3 +40,4 @@
 </section>
 
 {{ end }}
+

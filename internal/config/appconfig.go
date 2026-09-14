@@ -15,6 +15,7 @@ type AppConfig struct {
 	WebsiteName     string
 	WebsiteAddress  string
 	Port            string
+	DSN             string
 	Conn            *sql.DB
 	Renderer        *amrenderengine.TemplateCollection
 	TemplateData    map[string]*template.Template
@@ -43,6 +44,7 @@ func NewAppConfig() *AppConfig {
 		WebsiteName:     "",
 		WebsiteAddress:  "",
 		Port:            ":8080",
+		DSN:             "",
 		Conn:            nil,
 		Renderer:        nil,
 		TemplateData:    nil,

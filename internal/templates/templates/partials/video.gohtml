@@ -1,0 +1,64 @@
+{{ define "video" }}
+<section class="video-showcase" aria-labelledby="video-title">
+	<div class="container">
+		<div class="video-intro">
+			<p class="eyebrow">A look at what we build</p>
+
+			<h2 id="video-title">
+				See the project<br>
+				come to life.
+			</h2>
+
+			<p class="video-description">
+				A quick, unfiltered tour of an outside railing project we are working on
+				for a home remodel in Leelanau County, Michigan.
+			</p>
+
+			<a class="video-link" href="/contact">
+				Start your project
+				<span aria-hidden="true">↗</span>
+			</a>
+		</div>
+
+		<div class="video-stage">
+			<div class="video-glow"></div>
+
+			<div class="video-card">
+				<div class="video-card-header">
+					<span class="video-label">
+						<span class="recording-dot"></span>
+						Project tour
+					</span>
+
+					<span class="video-location">Leelanau County, MI</span>
+				</div>
+
+				<div class="video-frame">
+					<video
+						controls
+						preload="metadata"
+						autoplay
+						muted
+						loop
+						playsinline
+					>
+						<source
+							src="/static/images/2026/09/video.mp4"
+							type="video/mp4"
+						>
+						Your browser does not support video playback.
+					</video>
+				</div>
+
+				<div class="video-card-footer">
+					<span>Custom Outdoor Railing</span>
+					<span>2026</span>
+				</div>
+			</div>
+
+			<span class="video-sticker video-sticker-one">Built right.</span>
+			<span class="video-sticker video-sticker-two">Made to last.</span>
+		</div>
+	</div>
+</section>
+{{ end }}

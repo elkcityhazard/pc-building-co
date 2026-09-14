@@ -17,14 +17,23 @@ import (
 	amrenderengine "github.com/elkcityhazard/am-render-engine"
 	"github.com/elkcityhazard/pc-building-company/content"
 	"github.com/elkcityhazard/pc-building-company/internal/config"
+	"github.com/elkcityhazard/pc-building-company/internal/driver"
 	"github.com/elkcityhazard/pc-building-company/internal/handlers"
 	"github.com/elkcityhazard/pc-building-company/internal/models"
 	"github.com/elkcityhazard/pc-building-company/internal/templates"
 	"github.com/elkcityhazard/pc-building-company/pkg/mailer"
 	"github.com/yuin/goldmark"
+	"golang.org/x/image/webp"
 )
 
 var app *config.AppConfig = config.NewAppConfig()
+
+type image_t struct {
+	Name   string
+	Alt    string
+	Height int
+	Width  int
+}
 
 func main() {
 	app.Renderer = amrenderengine.NewTemplateCollection(templates.GetTemplatesFS(), "./internal/templates")
@@ -54,6 +63,61 @@ func main() {
 		"concatBaseURL": func(s string) string {
 			return app.WebsiteAddress + s
 		},
+		"getImages": func(s string) []image_t {
+			var imgMeta []string = []string{
+	"Custom closet remodel with built-in storage in Leelanau County, Michigan",
+	"Custom built-in shelving installation for a home remodel in Leelanau County, Michigan",
+	"Custom shelving and fireplace mantel built in Suttons Bay, Michigan",
+	"Custom built-in storage bench designed for a home remodel in Lake Leelanau, Michigan",
+	"Detailed view of custom built-in storage from a Lake Leelanau home remodeling project",
+	"Custom built-in bookcase handcrafted in Leelanau County, Michigan",
+	"Full view of custom built-in bookshelves made locally in Leelanau County",
+	"Custom bathtub surround with detailed trim from a Leelanau County bathroom remodel",
+	"Custom bathroom vanity, tilework, and cabinetry completed in Leelanau County, Michigan",
+	"Walk-in shower with custom tilework and built-in bench from a Lake Leelanau bathroom remodel",
+	"Custom tile walk-in shower and bathtub from a Leelanau County bathroom remodeling project",
+	"Custom bathroom vanity, shelving, and tilework completed in Leelanau County, Michigan",
+	"Custom outdoor deck remodel creating an inviting gathering space in Leelanau County, Michigan",
+	"Custom deck remodel with new windows, trim, and painting in Lake Leelanau, Michigan",
+	"Early construction phase of a living room remodel in Lake Leelanau, Michigan",
+	"Living room remodel in progress at a Lake Leelanau, Michigan home",
+	"Initial construction phase of a custom staircase project in Leelanau County, Michigan",
+	"Completed custom staircase with stained wood, trim, and safety railing in Leelanau County",
+	"Custom laundry room remodel with functional storage by P.C. Building Company in Leelanau County, Michigan",
+	"Early stage of an exterior home restoration project in Leelanau County, Michigan",
+	"Restored exterior trim, siding, and window inlay from a Lake Leelanau home remodel",
+}
+
+			var imgLst []image_t
+			files, err := filepath.Glob(fmt.Sprintf("%s", s))
+			if err != nil {
+				fmt.Println(err)
+				return nil
+			}
+
+			for j, v := range files {
+				f, err := os.Open(v)
+				if err != nil {
+					continue
+				}
+				defer f.Close()
+
+				img, err := webp.DecodeConfig(f)
+				if err != nil {
+					continue
+				}
+
+				var i image_t
+				i.Name = fmt.Sprintf("%s", f.Name())
+				i.Alt = imgMeta[j]
+				i.Width = img.Width
+				i.Height = img.Height
+
+				imgLst = append(imgLst, i)
+			}
+
+			return imgLst
+		},
 	}
 
 	_, err := app.Renderer.CreateTemplateCache()
@@ -63,6 +127,12 @@ func main() {
 	}
 
 	parseFlags(app)
+
+	db, err := driver.NewDBConn(app)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
 
 	app.Renderer.SetStringMapEntry("SiteTitle", app.WebsiteName)
 	if app.IsProduction {
@@ -106,7 +176,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	handlerRepo := handlers.NewHandlerRepo(app, nil)
+	handlerRepo := handlers.NewHandlerRepo(app, db)
 	handlers.SetHandlerRepo(handlerRepo)
 
 	mailer := mailer.NewMailer(app.SMTPHost, app.SMTPUsername, app.SMTPPassword, app.SMTPPort)
