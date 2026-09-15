@@ -255,6 +255,13 @@
 	.video-card {
 		width: min(78vw, 24rem);
 	}
+  [class*="video-sticker"] {
+    font-size: clamp(0.5rem, 0.3125rem + 0.8333vw, 0.75rem);
+    visibility: hidden;
+    @media screen and (min-width: calc(350 / 16 * 1rem)) {
+      visibility: initial;
+    }
+}
 
 	.video-sticker-one {
 		right: 2%;
