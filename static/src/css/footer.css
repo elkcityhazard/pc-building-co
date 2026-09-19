@@ -3,37 +3,46 @@
     color: var(--white);
     padding-block: var(--spacing-md);
     padding-inline: var(--spacing-md);
+
     h3 {
         font-size: clamp(1.5rem, 0.7744rem + 4.6425vw, 3rem);
         font-family: 'Great Vibes', handwriting;
         text-align: center;
+
+        @media screen and (min-width: calc(767 / 16 * 1rem)) {
+            margin-block-end: var(--spacing-xs);
+        }
     }
-                p {
-                    text-align: center;
-                }
+
+    p {
+        text-align: center;
+    }
 
     address {
         ul {
             list-style: none;
             padding-inline-start: unset;
         }
+
         a {
             color: var(--sunset);
             text-decoration: none;
             transition: all 250ms;
+
             &:hover,
             &:active {
                 color: var(--golden-brown-2);
             }
         }
     }
-    
+
     &__inner {
         max-width: 1200px;
         margin-inline: auto;
         display: flex;
         flex-flow: column nowrap;
         min-height: inherit;
+
         .row {
             width: 100%;
             display: flex;
@@ -43,33 +52,34 @@
             max-width: calc(968 / 16 * 1rem);
             margin-inline: auto;
             gap: var(--spacing-md);
+
+            @media screen and (min-width: calc(499 / 16 * 1rem)) {
+                flex-flow: row nowrap;
+
+            }
+
             .col {
+                *:not(h3) {
+                    font-size: clamp(0.75rem, 0.5625rem + 0.8333vw, 1rem);
+                }
+
+                h3 {
+                    font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
+                }
+
                 max-width: 100%;
                 width: calc(325 / 16 * 1rem);
+
                 @media screen and (min-width: calc(767 / 16 * 1rem)) {
-                    display: grid;
-                    place-items: start center;
                     position: relative;
-                    width: calc(33% - var(--spacing-md)*2);
-                    grid-template-rows: 3.5rem 1fr;
-                    
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        right: 0;
-                        width: 2px;
-                        transform: translate(-1px, -50%);
-                        background: var(--sunset);
-                        height: 75%;
-                    }
-                   
-                    &:last-child {
-                        &::after {
-                            display: none;
-                        }
+                    width: calc(30% - var(--spacing-md)*2);
+
+                    &__wrap {
+                        margin: auto;
+                        width: fit-content;
                     }
                 }
+
                 h3 {
                     font-family: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
                     font-size: clamp(1.25rem, 0.9312rem + 1.7059vw, 1.75rem);
@@ -77,6 +87,7 @@
                     text-decoration: underline;
                     text-align: left;
                 }
+
                 .social-links {
                     display: flex;
                     align-items: center;
@@ -87,6 +98,7 @@
                     margin-inline: none;
                     padding: unset;
                     width: fit-content;
+
                     li {
                         a {
                             [class*="icon-"] {
@@ -94,52 +106,106 @@
                                 width: calc(28 / 16 * 1rem);
                                 stroke: var(--sunset);
                                 transition: all 250ms;
+
                                 path {
                                     stroke: var(--sunset);
                                     transition: all 250ms;
                                 }
                             }
+
                             &:hover,
                             &:active {
                                 [class*="icon-"] {
                                     stroke: var(--golden-brown);
+
                                     path {
                                         stroke: var(--golden-brown);
                                         fill: var(--sunset);
-    
+
                                     }
                                 }
+
                                 .icon-instagram {
                                     stroke: var(--golden-brown);
+
                                     path {
                                         &:nth-child(1) {
                                             color: transparent;
                                             fill: var(--sunset);
                                             stroke: var(--golden-brown);
-                
+
                                         }
+
                                         &:nth-child(2) {
                                             color: var(--sunset);
-                                            fill:none;
+                                            fill: none;
                                             stroke: var (--golden-brown);
                                         }
+
                                         &:nth-child(3) {
                                             stroke: var(--sunset);
                                         }
                                     }
-                                    
+
                                 }
 
                             }
                         }
                     }
                 }
+
+                @media screen and (min-width: calc(767 / 16 * 1rem)) {
+                    &:first-child {
+                        .col {
+                            &__wrap {
+                                margin-inline-end: var(--spacing-sm);
+                                margin-inline-start: auto;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2n) {
+
+                    &::before,
+                    &::after {
+                        --border-height: 70%;
+                        --border-width: 2px;
+                        content: '';
+                        position: absolute;
+                        height: var(--border-height, 50%);
+                        width: var(--border-width, 2px);
+                        background: var(--sunset);
+                    }
+
+                    &::before {
+                        top: 50%;
+                        left: 0;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &::after {
+                        top: 50%;
+                        right: 0;
+                        transform: translate(50%, -50%);
+                    }
+                }
+
+                &:last-child {
+                    .col {
+                        &__wrap {
+                            margin-inline-end: auto;
+                            margin-inline-start: var(--spacing-sm);
+                        }
+                    }
+                }
             }
+
             &:nth-child(3n) {
                 display: flex;
                 align-items: stretch;
                 justify-content: flex-start;
-                flex-flow:row wrap;
+                flex-flow: row wrap;
             }
         }
     }
@@ -150,33 +216,36 @@
         list-style: none;
         padding-inline-start: unset;
     }
+
     &-item {
         color: var(--sunset);
     }
+
     &-link {
         color: var(--sunset);
         text-decoration: none;
         transition: all 250ms;
-            &:hover,
-            &:active {
-                color: var(--golden-brown-2);
-            }
+
+        &:hover,
+        &:active {
+            color: var(--golden-brown-2);
+        }
     }
 
 }
 
 .footer__subnav {
-    &-group {
-        
-    }
+    &-group {}
+
     &-link {
         color: var(--sunset);
         text-decoration: none;
         transition: all 250ms;
-            &:hover,
-            &:active {
-                color: var(--golden-brown-2);
-            }
+
+        &:hover,
+        &:active {
+            color: var(--golden-brown-2);
+        }
     }
 }
 
@@ -189,10 +258,12 @@
     margin-inline: auto;
     margin-block-start: var(--spacing-xl);
     text-align: center;
+
     a {
         color: var(--sunset);
         text-decoration: underline;
         transition: all 300ms;
+
         &:hover,
         &:focus {
             color: var(--golden-brown-2);

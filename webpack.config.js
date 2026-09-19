@@ -1,4 +1,5 @@
 const path = require("path");
+const { experiments } = require("webpack");
 
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
@@ -8,40 +9,13 @@ module.exports = {
   output: {
     path: path.join(__dirname, "static/dist"),
     filename: "index.js",
+    cssFilename: "css/custom-ps.css"
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    "postcss-preset-env",
-                    {
-                      // options
-                    },
-                  ],
-                ],
-              },
-            },
-          },
-        ],
-      },
-      {
-        test: /\.png|jpe?g|gif|webp|svg|bmp|tiff/,
-        use: "file-loader",
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif)/i,
-        type: "asset/resource",
-      },
     ],
   },
+  experiments: {
+    css: true,
+  }
 };
-

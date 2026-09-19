@@ -1,5 +1,6 @@
 {{define "footer-nav"}}
-<h3>Navigation</h3>
+<div class="col__wrap">
+        <h3>Navigation</h3>
   {{with .Data.MainNav}}
     <nav 
     class="footer__nav" 
@@ -42,5 +43,6 @@
             {{end}}
         </ul>
     </nav>
+</div>
     {{ end }}
 {{ end }}

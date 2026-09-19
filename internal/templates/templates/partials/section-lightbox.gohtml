@@ -1,36 +1,37 @@
 {{define "section-lightbox" }}
+{{ $gallery := .Data.Gallery }}
+{{ $title := $gallery.Title }}
+{{ $description := $gallery.Description }}
+{{ $images := $gallery.Images }}
 <section class="gallery" id="gallery">
 <div class="container">
     <div class="row">
         <div class="col">
             <hgroup>
-                <h2>Our Work</h2>
-                <p>Check out some of our latest remodel and builder work from around Leelanau County, Michigan.</p>
+                <h2>{{ $title | safeHTML }}</h2>
+                <p>{{ $description | safeHTML }}</p>
                 <hr />
             </hgroup>
         </div>
     </div>
     <div class="row">
-        {{ $thumbnails := "static/images/2026/09/output/*_360x360.webp" | getImages }}
-        {{ $fullsize := "static/images/2026/09/output/*_1920x1080.webp" | getImages }}
         <div class="pswp-gallery pswp-gallery--single-column" id="galleryWork">
-            {{ with $thumbnails }}
+            {{ with $images }}
                 {{ range $i, $v := . }}
-                    {{ $large := index $fullsize $i }}
-                    <a href="{{ $large.Name }}" 
-              data-pswp-width="{{$large.Width}}" 
-              data-pswp-height="{{ $large.Height}}" 
-              title="{{ $large.Alt }}"
-              aria-label="{{ $large.Alt }}"
+                    <a href="{{ $v.Fullsize }}" 
+              data-pswp-width="{{$v.FullsWidth}}" 
+              data-pswp-height="{{ $v.FullsHeight}}" 
+              title="{{ $v.Description }}"
+              aria-label="{{ $v.Description }}"
               target="_blank">
               <img 
-                data-src="{{$v.Name}}" 
-                alt="{{$v.Alt}}" 
-                height="{{$v.Height}}" 
-                width="{{$v.Width}}" 
+                data-src="{{$v.Thumbnail}}" 
+                alt="{{$v.Description}}" 
+                height="{{$v.ThumbHeight}}" 
+                width="{{$v.ThumbWidth}}" 
                 loading="lazy" 
                 decoding="async" />
-                <div><p>{{$v.Alt}}</p></div>
+                <div><p>{{$v.Description}}</p></div>
             </a>
                 {{ end }}
             {{ end }}

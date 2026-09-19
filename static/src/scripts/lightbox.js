@@ -1,6 +1,6 @@
-import PhotoSwipeLightbox from "../../../node_modules/photoswipe/dist/photoswipe-lightbox.esm"
-import PhotoSwipe from "../../../node_modules/photoswipe/dist/photoswipe.esm.js"
-import "../../../node_modules/photoswipe/dist/photoswipe.css"
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+// css is included via postcss build process now
+
 const lightbox = new PhotoSwipeLightbox({
     // may select multiple "galleries"
     gallery: '#galleryWork',
@@ -9,10 +9,10 @@ const lightbox = new PhotoSwipeLightbox({
     children: 'a',
   
     // setup PhotoSwipe Core dynamic import
-    pswpModule: PhotoSwipe
-  });
+    pswpModule: () => import('photoswipe')
+});
   
 
-export const InitLightBox = function() {
+export const InitLightBox = function () {
     lightbox.init()
 }
