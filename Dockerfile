@@ -19,8 +19,8 @@ RUN go mod download
 COPY . .
 
 # Build assets and binary
-RUN npm run css:build \
-    && npm run webpack:build \
+RUN npm run webpack:build \
+    && npm run css:build \
     && go build -o "${BIN_NAME}" cmd/web/*.go
 
 RUN chmod +x entrypoint.sh

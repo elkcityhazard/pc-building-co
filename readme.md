@@ -96,3 +96,25 @@ exec ${BIN_NAME} \
 
 
 ```
+
+## Example build.sh
+
+```
+#!/usr/bin/env sh
+
+IMAGE=docker.io/reponame/containername:latest
+
+podman manifest rm "$IMAGE" 2>/dev/null || true
+
+podman build \
+  --platform linux/arm64 \
+  --manifest "$IMAGE" \
+  --pull=always \
+  --no-cache \
+  --file ./Dockerfile \
+  .
+
+  podman manifest inspect "$IMAGE"
+
+  podman manifest push --all "$IMAGE" "docker://$IMAGE"
+  ```

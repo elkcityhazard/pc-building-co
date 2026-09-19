@@ -10,3 +10,4 @@ bin/**
 static/dist
 entrypoint.sh
 *.mp4
+build.sh
