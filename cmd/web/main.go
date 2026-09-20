@@ -27,13 +27,6 @@ import (
 
 var app *config.AppConfig = config.NewAppConfig()
 
-type image_t struct {
-	Name   string
-	Alt    string
-	Height int
-	Width  int
-}
-
 func main() {
 	app.Renderer = amrenderengine.NewTemplateCollection(templates.GetTemplatesFS(), "./internal/templates")
 	app.Renderer.CreateTemplateCache()

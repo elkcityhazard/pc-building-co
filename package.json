@@ -18,7 +18,6 @@
     "postcss": "^8.5.28",
     "postcss-cli": "^12.0.0",
     "postcss-import": "^17.0.0",
-    "postcss-loader": "^8.2.1",
     "postcss-nested": "^8.0.1",
     "postcss-preset-env": "^11.5.3",
     "postcss-url": "^10.1.4",

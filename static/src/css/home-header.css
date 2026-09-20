@@ -1,47 +1,58 @@
 :root {
-    --start-gradient: rgba(255,255,255,0.75);
-    --end-gradient: rgba(255,255,255,0);
+    --start-gradient: rgba(255, 255, 255, 0.75);
+    --end-gradient: rgba(255, 255, 255, 0);
 }
 
 
 .home-header {
     background: var(--sunset);
+
     @media screen and (min-width: calc(767 / 16 * 1rem)) {
-    display: grid;
-    place-items: center;
-    min-height: 66vh;
+        display: grid;
+        place-items: center;
+        min-height: 66vh;
         background: #fff no-repeat center / cover;
+
         &.has-img {
-            background-image: url("/static/images/a-home-with-a-grassy-lawn.webp");
+            transition: 16.67;
+            background: url("/static/images/a-home-with-a-grassy-lawn.webp") no-repeat center 100% /cover;
         }
     }
+
     &__inner {
         height: inherit;
+
         .row {
             display: grid;
             grid-template-columns: 1fr;
             place-items: center;
             height: inherit;
+
             .col {
                 width: 100%;
                 max-width: calc(768 / 16 * 1rem);
+
                 hgroup {
                     background: var(--sunset-8);
                     border-radius: 0;
+
                     @media screen and (min-width:calc(767 / 16 * 1rem)) {
                         border-radius: var(--spacing-xl) var(--spacing-xl) 0 0;
                     }
+
                     padding-block: var(--spacing-md);
                     padding-inline: var(--spacing-md);
                     padding: var(--spacing-md);
+
                     h1 {
                         color: var(--drab-dark-brown);
                         font-family: 'Great Vibes', sans-serif;
                         text-transform: capitalize;
                     }
+
                     p {
                         color: var(--drab-dark-brown);
-                        font-size:clamp(1rem, 0.6805rem + 1.7094vw, 1.5rem);
+                        font-size: clamp(1rem, 0.6805rem + 1.7094vw, 1.5rem);
 
                     }
                 }

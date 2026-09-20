@@ -18,20 +18,20 @@
         <div class="pswp-gallery pswp-gallery--single-column" id="galleryWork">
             {{ with $images }}
                 {{ range $i, $v := . }}
-                    <a href="{{ $v.Fullsize }}" 
-              data-pswp-width="{{$v.FullsWidth}}" 
-              data-pswp-height="{{ $v.FullsHeight}}" 
-              title="{{ $v.Description }}"
-              aria-label="{{ $v.Description }}"
+                    <a href="{{ $v.Fullsize |safeHTML }}" 
+              data-pswp-width="{{$v.FullsWidth }}" 
+              data-pswp-height="{{ $v.FullsHeight }}" 
+              title="{{ $v.Description | safeHTML }}"
+              aria-label="{{ $v.Description | safeHTML }}"
               target="_blank">
               <img 
-                data-src="{{$v.Thumbnail}}" 
-                alt="{{$v.Description}}" 
-                height="{{$v.ThumbHeight}}" 
-                width="{{$v.ThumbWidth}}" 
+                data-src="{{$v.Thumbnail | safeHTML }}" 
+                alt="{{$v.Description | safeHTML }}" 
+                height="{{$v.ThumbHeight }}" 
+                width="{{$v.ThumbWidth }}" 
                 loading="lazy" 
                 decoding="async" />
-                <div><p>{{$v.Description}}</p></div>
+                <div><p>{{$v.Description | safeHTML }}</p></div>
             </a>
                 {{ end }}
             {{ end }}
