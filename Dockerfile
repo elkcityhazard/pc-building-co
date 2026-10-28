@@ -12,7 +12,6 @@ ENV MARIADB_USER=""
 ENV MARIADB_PASSWORD=""
 COPY package.json package-lock.json* ./
 RUN npm install
-
 COPY go.mod go.sum* ./
 RUN go mod download
 

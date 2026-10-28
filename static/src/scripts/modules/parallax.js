@@ -19,10 +19,10 @@ export const Parallax = function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        window.addEventListener("scroll", throttle(updateParallax, 16.67));
+        window.addEventListener("scroll", throttle(updateParallax, 0));
         updateParallax(); // Initial call to set the position
       } else {
-        window.removeEventListener("scroll", throttle(updateParallax, 16.67));
+        window.removeEventListener("scroll", throttle(updateParallax, 0));
       }
     });
   });
